@@ -1,4 +1,4 @@
-from engine.intent.objects import handler
+from engine.intent import handler
 from engine.intent.Util import join
 
 
