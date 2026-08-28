@@ -1,9 +1,9 @@
-from engine.intent.objects import XML
+from engine.intent.objects import handler
 from engine.intent.Util import join
 
 
-parser,categories = XML.create_parser(
-    XML.XMLHandler()
+parser,categories = handler.create_parser(
+    handler.XMLHandler()
 )
 
 parser.parse(join(
