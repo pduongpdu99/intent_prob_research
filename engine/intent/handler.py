@@ -3,9 +3,10 @@ from engine.intent.constants import Tag
 from typing import List
 import xml.sax
 
-def create_parser(handler: XMLHandler):
+def create_parser(handler: XMLHandler, only_parser = True):
     parser = xml.sax.make_parser()
     parser.setContentHandler(handler)
+    if only_parser: return parser
     return parser, handler._categories
 
 
