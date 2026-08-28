@@ -1,0 +1,18 @@
+[project]
+name="IntentDetection"
+version="0.1.0"
+description="research and develop my own intent detection"
+readme="README.md"
+requires-python=">=3.14"
+dependencies = [
+    "python-aiml>=0.9.2",
+    "pydantic>=2.13.4"
+]
+license = {text = "MIT"}
+authors = [
+    {name = "Duong Pham", email = "pduongpdu99@gmail.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
