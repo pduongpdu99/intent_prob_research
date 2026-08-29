@@ -14,7 +14,7 @@ def remove_accent(vietnamese_text: str):
 
 def get_vietnamese_stopwords():
     stop_words = []
-    with open(os.path.join(root_directory_path, "data", "stop_words.txt"), "rb") as f:
+    with open(os.path.join(root_directory_path, "data", "stop_words.txt"), "r") as f:
         stop_words = [i.strip() for i in f.readlines() if i.strip() != ""]
 
     return stop_words
