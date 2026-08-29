@@ -1,17 +1,8 @@
-from engine.intent import handler
-from engine.intent.Util import join
+from engine.intent import Brain, join
 
+brain = Brain()
+brain.learn(join("engine", "intent", "data", "tu_van_phan_mem.aiml"))
 
-parser,categories = handler.create_parser(
-    handler.XMLHandler()
-)
-
-parser.parse(join(
-    "engine",
-    "intent",
-    "data",
-    # "tu_van_phan_mem.aiml"
-    "text.xml"
-))
-
-print(categories)
+while True:
+    ask = input("You: ")
+    print("Bot:",brain.respond(ask))

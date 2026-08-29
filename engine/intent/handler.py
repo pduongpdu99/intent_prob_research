@@ -14,6 +14,7 @@ class XMLHandler(xml.sax.ContentHandler):
     _stack:List[str] = []
     _categories: List[dict] = []
     _current_template: List[dict] = []
+    _pattern_links = {}
     _content = ""
 
     def startElement(self, name: str, attrs: AttributesImpl) -> None:
@@ -38,17 +39,20 @@ class XMLHandler(xml.sax.ContentHandler):
             }
             self._current_template.append(node)
         elif name == Tag.SET.value:
-            if not attrs.get("key"):
+            if not attrs.get("name"):
                 raise KeyError("XML key name can not null")
             
-            node = {"tag": "set","key": attrs.get("key"),"value": attrs.get("value", "Unknown")}
+            node = {"tag": "set","key": attrs.get("name"),"value": attrs.get("value", "Unknown")}
             self._current_template.append(node)
         elif name == Tag.GET.value:
-            node = {"tag": "get","key": attrs.get("key", "Unknown")}
+            node = {"tag": "get","key": attrs.get("name", "Unknown")}
             self._current_template.append(node)
             pass
 
     def endElement(self, name: str) -> None:
+        if name == Tag.SRAI.value:
+            self._pattern_links[self.current_pattern] = self._content
+
         if name == Tag.CATEGORY.value:
             self._categories.append({
                 "pattern": self.current_pattern,
