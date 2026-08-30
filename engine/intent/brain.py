@@ -3,7 +3,7 @@ from xml.sax.expatreader import ExpatParser
 from typing import List
 import re
 import random
-from engine.intent import Util
+from engine import Util
 # call parser 
 
 class Brain:

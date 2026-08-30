@@ -1,5 +1,5 @@
 from xml.sax.xmlreader import AttributesImpl
-from engine.intent.constants import Tag
+from engine.constants import Tag
 from typing import List
 import xml.sax
 
