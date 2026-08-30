@@ -1,5 +1,5 @@
 from .brain import Brain
-from engine.intent.Util import join
+from engine.Util import join, get_vietnamese_stopwords
 
 # expose
 __all__ = [
@@ -14,3 +14,6 @@ __all__ = [
 # BRAIN
 
 # Hander
+
+# =================
+"""I want to determize any sentence like "cancel the flight" => cancel_booking"""
