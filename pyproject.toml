@@ -1,18 +1,28 @@
 [project]
-name="IntentDetection"
+name="intent-detection"
 version="0.1.0"
 description="research and develop my own intent detection"
 readme="README.md"
 requires-python=">=3.14"
 dependencies = [
     "pydantic>=2.13.4",
-    "nltk>=3.10.3"
+    "nltk>=3.10.3",
+    "sentence-transformers>=6.0.0",
+    "pandas",
+    "huggingface_hub",
+    "torch",
+    "python-dotenv",
+    "numba"
 ]
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Duong Pham", email = "pduongpdu99@gmail.com"}
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    # "License :: OSI Approved :: MIT License",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["data*"]
