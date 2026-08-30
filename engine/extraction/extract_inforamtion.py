@@ -1,8 +1,15 @@
 import nltk
 from engine.Util import get_vietnamese_stopwords, get_non_sw
-from typing import cast
+from typing import cast, List
 
-def extract_tokens(document: str, essential=False, ngram=4):
+try:
+    # Try to look up the resource to see if it exists
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    # Download it only if it is missing
+    nltk.download('punkt_tab')
+
+def extract_tokens(document: str, pass_stop_word=False, ngram=4) -> List[str]:
     results = []
     for sent in document.split("."):
         sent = sent.strip()
@@ -11,7 +18,7 @@ def extract_tokens(document: str, essential=False, ngram=4):
         nsw = cast(dict, get_non_sw(kv_structure=True))
         tokens = nltk.word_tokenize(sent.lower())
         _size = len(tokens)
-        if not essential:
+        if not pass_stop_word:
             results.append(tokens)
         
         result = []
