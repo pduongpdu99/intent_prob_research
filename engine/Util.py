@@ -1,5 +1,9 @@
 import os
 import unicodedata
+from dotenv import load_dotenv
+
+load_dotenv()
+HF_TOKEN = os.getenv("hf_token")
 
 root_directory_path = os.getcwd()
 
