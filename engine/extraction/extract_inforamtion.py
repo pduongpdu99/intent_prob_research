@@ -51,12 +51,10 @@ def extract_tokens(document: str, pass_stop_word=False, ngram=4) -> List[str]:
                 
                 if not matched and val not in sw:
                     result.append(val)
-                    index += 1
-                    
             else:
                 if val not in sw:
                     result.append(val)
-                index += 1
+            index += 1
         results.append(result)
     return results
 
