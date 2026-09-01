@@ -1,0 +1,803 @@
+Hệ thống quản lý phòng khám được xây dựng nhằm số hóa và tập trung các hoạt động quản lý bệnh nhân, lịch khám, hồ sơ bệnh án, kê đơn và theo dõi doanh thu. Hệ thống phục vụ ba nhóm người dùng chính gồm bệnh nhân, bác sĩ và quản lý phòng khám. Bệnh nhân có thể đăng ký tài khoản, cập nhật thông tin cá nhân, xem thông tin bác sĩ và chuyên khoa, lựa chọn thời gian phù hợp và đặt lịch khám trực tuyến. Sau khi đặt lịch, bệnh nhân có thể theo dõi trạng thái lịch hẹn, nhận thông báo và xem lại lịch sử khám. Bác sĩ có thể đăng nhập vào hệ thống để quản lý lịch làm việc, xem danh sách bệnh nhân theo từng lịch hẹn và truy cập hồ sơ bệnh án của bệnh nhân. Trong quá trình khám, bác sĩ có thể ghi nhận thông tin chẩn đoán, triệu chứng, kết quả khám, chỉ định điều trị và tạo đơn thuốc. Hồ sơ bệnh án cần được lưu trữ theo từng lần khám để hỗ trợ việc tra cứu lịch sử điều trị trong các lần khám tiếp theo. Quản lý phòng khám có quyền quản lý thông tin bác sĩ, chuyên khoa, lịch làm việc và các hoạt động liên quan đến phòng khám. Hệ thống cung cấp chức năng theo dõi doanh thu theo ngày, tuần, tháng hoặc khoảng thời gian tùy chọn, đồng thời hỗ trợ thống kê số lượng lịch khám và tình trạng hoạt động của phòng khám. Hệ thống cần đảm bảo phân quyền truy cập, bảo mật thông tin bệnh nhân và ghi nhận lịch sử các thao tác quan trọng của người dùng.
+Hệ thống quản lý nhân sự được xây dựng nhằm hỗ trợ doanh nghiệp số hóa toàn bộ quy trình quản lý nhân viên, chấm công, nghỉ phép, đánh giá hiệu suất và quản lý thông tin lao động. Hệ thống phục vụ các nhóm người dùng gồm nhân viên, quản lý trực tiếp và bộ phận nhân sự. Nhân viên có thể đăng nhập để xem và cập nhật thông tin cá nhân, theo dõi lịch làm việc, thực hiện chấm công, gửi yêu cầu nghỉ phép và theo dõi trạng thái phê duyệt. Hệ thống có thể hỗ trợ nhiều hình thức chấm công tùy theo chính sách của doanh nghiệp. Quản lý trực tiếp có thể theo dõi danh sách nhân viên thuộc bộ phận, xem tình trạng chấm công, xác nhận yêu cầu nghỉ phép và thực hiện đánh giá kết quả công việc. Hệ thống hỗ trợ thiết lập mục tiêu công việc, KPI hoặc OKR cho từng nhân viên và ghi nhận kết quả theo từng giai đoạn đánh giá. Nhân viên có thể xem các mục tiêu được giao và cập nhật tiến độ thực hiện. Bộ phận nhân sự có quyền quản lý hồ sơ nhân viên, phòng ban, chức vụ, hợp đồng lao động và chính sách nghỉ phép. Hệ thống cung cấp báo cáo tổng hợp về tình hình nhân sự, tỷ lệ đi làm, nghỉ phép và kết quả đánh giá hiệu suất. Các chức năng cần được phân quyền theo vai trò, đảm bảo người dùng chỉ có thể truy cập những thông tin phù hợp với trách nhiệm của mình. Hệ thống cũng cần lưu lại lịch sử thay đổi dữ liệu quan trọng để phục vụ công tác quản lý và kiểm tra.
+Hệ thống quản lý thư viện được xây dựng nhằm hỗ trợ số hóa hoạt động quản lý tài liệu, độc giả, mượn trả sách và theo dõi tình trạng sử dụng tài nguyên thư viện. Hệ thống phục vụ các nhóm người dùng gồm độc giả, nhân viên thư viện và quản lý. Độc giả có thể đăng ký tài khoản, tìm kiếm sách theo tên, tác giả, thể loại hoặc từ khóa, xem thông tin chi tiết về tài liệu, kiểm tra tình trạng còn sách và thực hiện đăng ký mượn. Hệ thống cho phép độc giả theo dõi danh sách sách đang mượn, thời hạn trả, lịch sử mượn trả và các khoản phí phát sinh do trả sách quá hạn. Nhân viên thư viện có thể quản lý thông tin sách, phân loại tài liệu, cập nhật số lượng bản sao, tiếp nhận yêu cầu mượn trả và xử lý việc gia hạn hoặc trả sách. Khi sách được mượn hoặc trả, hệ thống tự động cập nhật trạng thái và số lượng tài liệu khả dụng. Quản lý có thể theo dõi tình hình hoạt động của thư viện thông qua các báo cáo về số lượng sách, lượt mượn, lượt trả, sách quá hạn và những tài liệu được sử dụng nhiều nhất. Hệ thống cần hỗ trợ phân quyền người dùng, bảo đảm tính chính xác của dữ liệu và lưu lại lịch sử các giao dịch mượn trả để phục vụ việc tra cứu, thống kê và kiểm soát hoạt động thư viện.
+Hệ thống quản lý bãi đỗ xe thông minh được xây dựng nhằm hỗ trợ tự động hóa việc quản lý phương tiện, vị trí đỗ xe, vé gửi xe và doanh thu của bãi đỗ. Người dùng có thể đăng ký tài khoản, xem tình trạng chỗ trống theo khu vực, lựa chọn vị trí phù hợp và thực hiện đặt chỗ trước thông qua ứng dụng. Khi phương tiện đến bãi, hệ thống ghi nhận thông tin xe, thời gian vào và xác nhận vị trí đỗ đã được đặt hoặc tự động phân bổ vị trí còn trống. Nhân viên vận hành có thể theo dõi trạng thái các khu vực đỗ xe, kiểm tra phương tiện đang ở trong bãi, xử lý các trường hợp phát sinh và hỗ trợ người dùng khi cần thiết. Hệ thống tự động ghi nhận thời gian phương tiện ra khỏi bãi, tính phí dựa trên thời gian gửi và chính sách giá áp dụng, đồng thời hỗ trợ nhiều hình thức thanh toán. Quản lý có thể cấu hình bảng giá theo loại phương tiện, thời gian hoặc khu vực, theo dõi doanh thu và xem các báo cáo về lưu lượng phương tiện, công suất sử dụng và thời gian cao điểm. Hệ thống cần đảm bảo thông tin giao dịch được lưu trữ chính xác, hỗ trợ phân quyền giữa người dùng, nhân viên và quản lý, đồng thời cung cấp lịch sử ra vào và thanh toán để phục vụ việc tra cứu, đối soát và quản lý hoạt động của bãi đỗ.
+Hệ thống quản lý nhà hàng được xây dựng nhằm hỗ trợ quản lý bàn, thực đơn, đặt món, phục vụ, thanh toán và theo dõi doanh thu. Khách hàng có thể xem thực đơn bằng mã QR, lựa chọn món, gửi yêu cầu gọi món và theo dõi trạng thái phục vụ. Nhân viên có thể quản lý bàn, tiếp nhận và cập nhật đơn hàng, chuyển yêu cầu đến khu vực bếp hoặc quầy pha chế và hỗ trợ thanh toán cho khách. Quản lý có thể cấu hình thực đơn, giá bán, chương trình khuyến mãi và theo dõi tình hình kinh doanh thông qua các báo cáo về doanh thu, số lượng đơn hàng và những món được gọi nhiều nhất. Hệ thống cần hỗ trợ quản lý trạng thái bàn, xử lý nhiều đơn hàng đồng thời và đảm bảo thông tin thanh toán được ghi nhận chính xác.
+Hệ thống quản lý ký túc xá được xây dựng nhằm hỗ trợ quản lý sinh viên, phòng ở, đăng ký chỗ, hợp đồng lưu trú và các khoản phí. Sinh viên có thể xem thông tin phòng, đăng ký hoặc gia hạn chỗ ở, gửi yêu cầu chuyển phòng và theo dõi các khoản phí cần thanh toán. Nhân viên quản lý có thể sắp xếp sinh viên vào phòng, cập nhật tình trạng phòng, quản lý hợp đồng và xử lý các yêu cầu của sinh viên. Hệ thống hỗ trợ ghi nhận thông tin điện nước, các khoản phí dịch vụ và tình trạng thanh toán. Quản lý có thể theo dõi công suất sử dụng phòng, số lượng sinh viên đang lưu trú, phòng còn trống và doanh thu từ các khoản phí. Hệ thống cần đảm bảo dữ liệu lưu trú được quản lý chính xác và phân quyền truy cập phù hợp.
+Hệ thống quản lý trung tâm thể thao được xây dựng nhằm hỗ trợ quản lý hội viên, gói tập, lịch sử dụng sân và các dịch vụ thể thao. Khách hàng có thể đăng ký tài khoản, xem các gói dịch vụ, đăng ký hội viên và đặt sân hoặc lớp tập theo thời gian mong muốn. Nhân viên có thể quản lý lịch đặt sân, xác nhận đăng ký, kiểm tra tình trạng hội viên và hỗ trợ khách hàng trong quá trình sử dụng dịch vụ. Huấn luyện viên có thể xem lịch giảng dạy và danh sách học viên tham gia các lớp tập. Quản lý có thể thiết lập giá dịch vụ, quản lý gói hội viên, theo dõi doanh thu và thống kê tần suất sử dụng các sân hoặc lớp học. Hệ thống cần tránh tình trạng đặt trùng lịch, hỗ trợ quản lý trạng thái đặt chỗ và lưu lại lịch sử giao dịch của khách hàng.
+Hệ thống quản lý vận chuyển được xây dựng nhằm hỗ trợ doanh nghiệp quản lý đơn hàng giao nhận, phương tiện, tài xế và quá trình vận chuyển hàng hóa. Khách hàng có thể tạo yêu cầu giao hàng, nhập thông tin người nhận, địa chỉ và loại hàng hóa, đồng thời theo dõi trạng thái đơn hàng trong suốt quá trình vận chuyển. Nhân viên điều phối có thể tiếp nhận đơn, phân công tài xế và phương tiện dựa trên khu vực, loại hàng hóa và lịch trình. Tài xế có thể xem danh sách đơn được giao, cập nhật trạng thái nhận hàng, đang vận chuyển và giao hàng thành công. Quản lý có thể theo dõi hiệu suất giao hàng, tình trạng phương tiện, doanh thu và tỷ lệ giao hàng đúng thời gian. Hệ thống cần hỗ trợ cập nhật trạng thái theo thời gian thực, lưu lại lịch sử vận chuyển và cung cấp cơ chế xử lý các đơn hàng giao thất bại hoặc phát sinh vấn đề.
+Hệ thống quản lý sự kiện được xây dựng nhằm hỗ trợ tổ chức và vận hành các sự kiện từ giai đoạn tạo chương trình, đăng ký người tham dự đến quản lý check-in và tổng hợp kết quả. Ban tổ chức có thể tạo sự kiện, thiết lập thời gian, địa điểm, số lượng người tham dự, nội dung chương trình và các loại vé. Người tham dự có thể xem thông tin sự kiện, đăng ký tham gia, lựa chọn loại vé và nhận mã xác nhận để sử dụng khi check-in. Nhân viên sự kiện có thể kiểm tra thông tin đăng ký, xác nhận người tham dự và xử lý các trường hợp phát sinh tại địa điểm tổ chức. Ban tổ chức có thể theo dõi số lượng đăng ký, tỷ lệ tham dự, doanh thu từ bán vé và thống kê người tham dự theo từng nhóm. Hệ thống cần đảm bảo mỗi đăng ký được quản lý duy nhất, hỗ trợ kiểm soát số lượng vé và cung cấp báo cáo sau khi sự kiện kết thúc.
+Hệ thống quản lý căn hộ chung cư được xây dựng nhằm hỗ trợ ban quản lý quản lý cư dân, căn hộ, phương tiện, phí dịch vụ và các yêu cầu trong quá trình sinh sống. Cư dân có thể đăng ký tài khoản, cập nhật thông tin thành viên trong căn hộ, đăng ký phương tiện, theo dõi các khoản phí và gửi yêu cầu hỗ trợ đến ban quản lý. Hệ thống cho phép cư dân đăng ký sử dụng các tiện ích chung như phòng gym, hồ bơi, phòng sinh hoạt cộng đồng hoặc khu vực tổ chức sự kiện. Ban quản lý có thể quản lý danh sách căn hộ, cư dân, hợp đồng, phương tiện và tình trạng sử dụng các tiện ích. Khi phát sinh sự cố như hỏng thiết bị, rò rỉ nước hoặc vấn đề về an ninh, cư dân có thể tạo yêu cầu và theo dõi trạng thái xử lý. Nhân viên kỹ thuật có thể tiếp nhận yêu cầu, cập nhật tiến độ và ghi nhận kết quả xử lý. Ban quản lý có thể theo dõi doanh thu phí dịch vụ, công nợ, tình trạng cư dân và các yêu cầu đang chờ xử lý. Hệ thống cần hỗ trợ thông báo đến cư dân, phân quyền người dùng và lưu lại lịch sử các giao dịch, yêu cầu và thay đổi thông tin.
+Hệ thống quản lý phòng gym được xây dựng nhằm hỗ trợ quản lý hội viên, gói tập, huấn luyện viên, lịch tập và doanh thu. Khách hàng có thể đăng ký tài khoản, xem các gói tập, lựa chọn thời hạn sử dụng và đăng ký thành viên. Sau khi đăng ký, hội viên có thể xem thời hạn gói tập, lịch sử ra vào, đặt lịch với huấn luyện viên và đăng ký các lớp tập nhóm. Nhân viên có thể quản lý thông tin hội viên, kiểm tra trạng thái gói tập, xác nhận thanh toán và ghi nhận lượt check-in. Huấn luyện viên có thể quản lý lịch làm việc, xem danh sách học viên và lập kế hoạch tập luyện cho từng người. Quản lý có thể tạo và cập nhật các gói tập, thiết lập giá, quản lý nhân viên và theo dõi doanh thu. Hệ thống cung cấp báo cáo về số lượng hội viên mới, hội viên đang hoạt động, tỷ lệ gia hạn, lượt sử dụng phòng tập và doanh thu theo từng khoảng thời gian. Hệ thống cần hỗ trợ cảnh báo khi gói tập sắp hết hạn, tránh đặt lịch trùng và phân quyền truy cập phù hợp với từng vai trò.
+Hệ thống quản lý kho hàng được xây dựng nhằm hỗ trợ doanh nghiệp theo dõi hàng hóa, nhập kho, xuất kho, tồn kho và vị trí lưu trữ. Nhân viên kho có thể tiếp nhận hàng hóa từ nhà cung cấp, kiểm tra số lượng, cập nhật thông tin lô hàng và xác nhận nhập kho. Khi có yêu cầu xuất hàng, nhân viên có thể kiểm tra tồn kho, chuẩn bị hàng và ghi nhận giao dịch xuất kho. Hệ thống hỗ trợ quản lý nhiều kho, khu vực và vị trí lưu trữ, đồng thời theo dõi số lượng tồn của từng sản phẩm. Quản lý có thể thiết lập mức tồn kho tối thiểu và nhận cảnh báo khi số lượng hàng hóa giảm xuống dưới ngưỡng cho phép. Hệ thống cũng hỗ trợ kiểm kê định kỳ, ghi nhận chênh lệch giữa số lượng thực tế và số lượng trên hệ thống và lưu lại lịch sử điều chỉnh. Người quản lý có thể xem báo cáo về hàng tồn, hàng nhập, hàng xuất, sản phẩm bán chạy và những mặt hàng tồn lâu. Hệ thống cần đảm bảo dữ liệu kho được cập nhật nhất quán, kiểm soát quyền thực hiện giao dịch và cung cấp lịch sử để phục vụ việc đối soát.
+Hệ thống quản lý tuyển dụng được xây dựng nhằm hỗ trợ doanh nghiệp quản lý toàn bộ quy trình tuyển dụng nhân sự từ đăng tin đến tiếp nhận và đánh giá ứng viên. Bộ phận nhân sự có thể tạo vị trí tuyển dụng, mô tả yêu cầu công việc, số lượng cần tuyển và thời hạn nhận hồ sơ. Ứng viên có thể tìm kiếm vị trí phù hợp, tạo hồ sơ cá nhân, tải CV và gửi đơn ứng tuyển trực tuyến. Nhân viên tuyển dụng có thể xem hồ sơ, lọc ứng viên theo tiêu chí, cập nhật trạng thái và lên lịch phỏng vấn. Người phỏng vấn có thể ghi nhận kết quả đánh giá và nhận xét sau mỗi vòng tuyển dụng. Hệ thống hỗ trợ gửi thông báo cho ứng viên khi trạng thái hồ sơ thay đổi hoặc khi có lịch phỏng vấn mới. Bộ phận nhân sự có thể theo dõi số lượng ứng viên theo từng vị trí, tỷ lệ ứng viên vượt qua từng vòng và thời gian trung bình để hoàn thành tuyển dụng. Quản lý có thể xem báo cáo hiệu quả tuyển dụng và tình trạng các vị trí đang cần nhân sự. Hệ thống cần phân quyền dữ liệu ứng viên, bảo vệ thông tin cá nhân và lưu lại lịch sử xử lý hồ sơ.
+Hệ thống quản lý khách sạn được xây dựng nhằm hỗ trợ quản lý phòng, khách lưu trú, đặt phòng, nhận phòng, trả phòng và doanh thu. Khách hàng có thể tìm kiếm phòng theo ngày nhận và trả, loại phòng và số lượng khách, sau đó thực hiện đặt phòng trực tuyến. Hệ thống cung cấp thông tin về giá, tiện nghi, tình trạng phòng và chính sách đặt phòng. Nhân viên lễ tân có thể xác nhận đặt phòng, thực hiện thủ tục nhận phòng, cập nhật thông tin khách và xử lý yêu cầu trong thời gian lưu trú. Khi khách trả phòng, hệ thống tổng hợp chi phí phòng và các dịch vụ sử dụng để tạo hóa đơn. Nhân viên có thể cập nhật tình trạng phòng sau khi khách rời đi để bộ phận buồng phòng tiếp nhận và xử lý. Quản lý có thể cấu hình loại phòng, giá theo thời điểm, chương trình khuyến mãi và theo dõi công suất phòng. Hệ thống cung cấp báo cáo về doanh thu, số lượng đặt phòng, tỷ lệ sử dụng phòng và nguồn khách. Hệ thống cần đảm bảo không xảy ra đặt phòng trùng thời gian, quản lý chính xác trạng thái phòng và phân quyền dữ liệu cho từng bộ phận.
+Hệ thống quản lý trung tâm đào tạo được xây dựng nhằm hỗ trợ quản lý khóa học, học viên, giảng viên, lớp học và kết quả học tập. Học viên có thể đăng ký tài khoản, xem danh sách khóa học, thông tin chương trình đào tạo, lịch học và đăng ký lớp phù hợp. Giảng viên có thể xem danh sách học viên, quản lý nội dung giảng dạy, điểm danh và nhập kết quả đánh giá. Nhân viên đào tạo có thể tạo khóa học, mở lớp, phân công giảng viên, sắp xếp phòng học và quản lý lịch học. Hệ thống hỗ trợ ghi nhận điểm danh, điểm kiểm tra, kết quả cuối khóa và tình trạng hoàn thành của từng học viên. Học viên có thể theo dõi lịch học, kết quả học tập và nhận thông báo khi có thay đổi về lịch hoặc nội dung khóa học. Quản lý trung tâm có thể theo dõi số lượng học viên, tỷ lệ hoàn thành khóa học, hiệu suất giảng viên và doanh thu theo từng chương trình. Hệ thống cần hỗ trợ phân quyền giữa học viên, giảng viên, nhân viên và quản lý, đồng thời lưu trữ lịch sử học tập để phục vụ việc tra cứu và báo cáo.
+Hệ thống quản lý bảo trì thiết bị được xây dựng nhằm hỗ trợ doanh nghiệp theo dõi tài sản, thiết bị, lịch bảo trì và các sự cố kỹ thuật. Nhân viên có thể ghi nhận thiết bị mới, cập nhật thông tin vị trí, tình trạng hoạt động và lịch sử sửa chữa. Khi phát hiện sự cố, người sử dụng thiết bị có thể tạo yêu cầu bảo trì, mô tả vấn đề và đính kèm thông tin cần thiết. Nhân viên kỹ thuật có thể tiếp nhận yêu cầu, đánh giá mức độ nghiêm trọng, phân công người xử lý và cập nhật tiến độ sửa chữa. Hệ thống hỗ trợ thiết lập lịch bảo trì định kỳ dựa trên thời gian sử dụng hoặc yêu cầu của từng loại thiết bị. Quản lý có thể theo dõi các thiết bị đang hỏng, thời gian xử lý trung bình, chi phí sửa chữa và lịch bảo trì sắp tới. Hệ thống có thể cảnh báo khi thiết bị đến hạn bảo trì hoặc khi phát sinh sự cố nghiêm trọng. Các giao dịch liên quan đến linh kiện thay thế và chi phí bảo trì được lưu trữ để phục vụ việc kiểm soát ngân sách. Hệ thống cần quản lý lịch sử thiết bị đầy đủ và phân quyền thao tác theo vai trò.
+Hệ thống quản lý giao hàng được xây dựng nhằm hỗ trợ doanh nghiệp theo dõi quá trình vận chuyển đơn hàng từ khi được tạo đến khi giao thành công. Khách hàng có thể xem trạng thái đơn hàng, thông tin người giao và thời gian giao dự kiến. Nhân viên vận hành có thể tiếp nhận đơn, kiểm tra địa chỉ, phân loại khu vực giao hàng và phân công đơn cho tài xế. Tài xế có thể xem danh sách đơn được giao, thông tin người nhận, địa chỉ và yêu cầu giao hàng, đồng thời cập nhật trạng thái trong quá trình vận chuyển. Hệ thống hỗ trợ các trạng thái như chờ xử lý, đã lấy hàng, đang giao, giao thành công và giao thất bại. Khi giao hàng thất bại, tài xế có thể ghi nhận lý do để nhân viên xử lý và lên kế hoạch giao lại. Quản lý có thể theo dõi số lượng đơn, tỷ lệ giao thành công, thời gian giao hàng trung bình và hiệu suất của từng tài xế hoặc khu vực. Hệ thống cũng hỗ trợ đối soát tiền thu hộ và chi phí vận chuyển. Hệ thống cần đảm bảo trạng thái đơn hàng được cập nhật chính xác và lưu lại đầy đủ lịch sử vận chuyển.
+Hệ thống quản lý tài chính cá nhân được xây dựng nhằm hỗ trợ người dùng theo dõi thu nhập, chi tiêu, tiết kiệm và lập kế hoạch tài chính. Người dùng có thể ghi nhận các khoản thu nhập và chi tiêu, phân loại giao dịch theo nhóm như ăn uống, mua sắm, đi lại, nhà ở hoặc giải trí. Hệ thống cho phép người dùng thiết lập ngân sách cho từng danh mục trong một khoảng thời gian và theo dõi mức độ sử dụng ngân sách. Khi chi tiêu vượt hoặc gần đạt giới hạn, hệ thống có thể gửi cảnh báo để người dùng chủ động điều chỉnh kế hoạch. Người dùng có thể thiết lập các mục tiêu tiết kiệm, xác định số tiền cần đạt và thời hạn mong muốn. Hệ thống cung cấp biểu đồ và báo cáo giúp người dùng phân tích xu hướng thu chi, xác định các nhóm chi tiêu lớn và so sánh tình hình tài chính giữa các khoảng thời gian. Người dùng cũng có thể quản lý nhiều tài khoản hoặc nguồn tiền khác nhau và thực hiện đối soát số dư. Hệ thống cần bảo vệ dữ liệu tài chính cá nhân, yêu cầu xác thực phù hợp và lưu trữ lịch sử giao dịch một cách chính xác.
+Hệ thống quản lý nông nghiệp thông minh được xây dựng nhằm hỗ trợ người sản xuất theo dõi tình trạng cây trồng, môi trường canh tác và các hoạt động chăm sóc. Người dùng có thể quản lý thông tin khu vực sản xuất, loại cây trồng, mùa vụ và kế hoạch canh tác. Các thiết bị cảm biến có thể ghi nhận dữ liệu về độ ẩm đất, nhiệt độ, ánh sáng và các thông số môi trường khác để hệ thống theo dõi theo thời gian. Khi phát hiện điều kiện môi trường vượt ngoài ngưỡng thiết lập, hệ thống có thể gửi cảnh báo và đề xuất hoạt động chăm sóc phù hợp. Người sản xuất có thể ghi nhận các hoạt động như tưới nước, bón phân, phun thuốc và thu hoạch, đồng thời theo dõi chi phí phát sinh trong từng mùa vụ. Hệ thống hỗ trợ lập lịch chăm sóc và quản lý trạng thái của từng khu vực trồng trọt. Quản lý có thể xem báo cáo về năng suất, chi phí sản xuất, tình trạng cây trồng và hiệu quả của từng mùa vụ. Dữ liệu lịch sử được lưu trữ để phục vụ việc phân tích và cải thiện kế hoạch sản xuất trong tương lai. Hệ thống cần hỗ trợ quản lý thiết bị, cảnh báo sự cố và phân quyền người dùng theo vai trò.
+Hệ thống quản lý thư viện trường đại học được xây dựng nhằm hỗ trợ sinh viên và giảng viên tìm kiếm, mượn, trả và quản lý tài liệu học tập một cách thuận tiện. Người dùng có thể đăng nhập bằng tài khoản của trường, tìm kiếm sách và tài liệu theo tên, tác giả, chuyên ngành hoặc từ khóa, đồng thời xem số lượng bản sao đang có sẵn và vị trí lưu trữ của từng tài liệu. Sinh viên có thể gửi yêu cầu mượn sách, đăng ký giữ chỗ đối với tài liệu đang được mượn và theo dõi thời hạn trả. Hệ thống gửi thông báo khi thời hạn mượn sắp hết hoặc khi tài liệu đã được giữ chỗ trở nên khả dụng. Nhân viên thư viện có thể quản lý danh mục tài liệu, cập nhật số lượng bản sao, xử lý yêu cầu mượn trả, ghi nhận tình trạng tài liệu và xử lý các trường hợp mất hoặc hư hỏng. Hệ thống hỗ trợ quản lý nhiều loại tài liệu như sách giáo trình, tài liệu tham khảo, luận văn và tài liệu điện tử. Quản lý thư viện có thể theo dõi số lượng tài liệu, tần suất mượn, những tài liệu được sử dụng nhiều nhất, tình trạng quá hạn và hoạt động của từng nhóm người dùng. Hệ thống cũng hỗ trợ thống kê và báo cáo định kỳ để phục vụ việc bổ sung tài liệu và phân bổ nguồn lực. Dữ liệu người dùng và lịch sử mượn trả cần được bảo vệ, đồng thời các giao dịch quan trọng phải được lưu lại để phục vụ tra cứu và kiểm soát.
+Tích hợp giải pháp đánh giá KPI/OKR theo thời gian thực sử dụng Face Recognition và Liveness Detection. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ phân ca làm việc và tối ưu lịch trực áp dụng workflow engine và thông báo real-time. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp phân quyền truy cập theo phòng ban và vai trò kết hợp Redis cache và PostgreSQL. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý nghỉ phép và phê duyệt đơn từ trực tuyến sử dụng Face Recognition và Liveness Detection. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ phân ca làm việc và tối ưu lịch trực triển khai trên Kubernetes với zero-downtime. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống phân quyền truy cập theo phòng ban và vai trò tích hợp FCM và WebSocket. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc phân ca làm việc và tối ưu lịch trực sử dụng Elasticsearch cho tìm kiếm hồ sơ. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ chấm công thông minh bằng nhận diện khuôn mặt áp dụng geofencing cho chấm công ngoài văn phòng. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập hạ tầng hệ thống khảo sát mức độ gắn kết nhân viên áp dụng RBAC và ABAC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế theo dõi hiệu suất nhân viên qua dashboard áp dụng geofencing cho chấm công ngoài văn phòng. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun tính lương tự động theo ca làm việc phức tạp kết hợp OCR để số hóa hồ sơ. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ phân tích tỷ lệ nghỉ việc (turnover prediction) áp dụng JWT và OAuth2 cho xác thực. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý tài sản nhân viên và cấp phát thiết bị triển khai trên Kubernetes với zero-downtime. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc tính lương tự động theo ca làm việc phức tạp triển khai trên Kubernetes với zero-downtime. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp tích hợp eKYC cho quy trình tuyển dụng kết hợp biometric authentication. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển engine theo dõi hiệu suất nhân viên qua dashboard tích hợp Google Calendar và Outlook. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống phân ca làm việc và tối ưu lịch trực áp dụng geofencing cho chấm công ngoài văn phòng. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun phân ca làm việc và tối ưu lịch trực sử dụng QR code động cho điểm danh. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý hồ sơ nhân sự điện tử (e-Profile) sử dụng Elasticsearch cho tìm kiếm hồ sơ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế phân tích tỷ lệ nghỉ việc (turnover prediction) áp dụng RBAC và ABAC. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp quản lý hồ sơ nhân sự điện tử (e-Profile) tích hợp Google Calendar và Outlook. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển engine quản lý đào tạo nội bộ và LMS triển khai trên Kubernetes với zero-downtime. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý tài sản nhân viên và cấp phát thiết bị kết hợp OCR để số hóa hồ sơ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp phân quyền truy cập theo phòng ban và vai trò tích hợp FCM và WebSocket. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống phân ca làm việc và tối ưu lịch trực sử dụng QR code động cho điểm danh. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý phúc lợi và bảo hiểm nhân sự sử dụng AI để dự đoán rủi ro nghỉ việc. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ ghi nhật ký thao tác HR (audit log) kết hợp biometric authentication. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ tự động tạo hợp đồng lao động điện tử kết hợp OCR để số hóa hồ sơ. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế quản lý hồ sơ nhân sự điện tử (e-Profile) áp dụng workflow engine và thông báo real-time. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập hạ tầng phân quyền truy cập theo phòng ban và vai trò triển khai trên Kubernetes với zero-downtime. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập hạ tầng ghi nhật ký thao tác HR (audit log) kết hợp OCR để số hóa hồ sơ. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc phân tích tỷ lệ nghỉ việc (turnover prediction) tích hợp FCM và WebSocket. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng nền tảng tự động tạo hợp đồng lao động điện tử kết hợp Redis cache và PostgreSQL. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun tuyển dụng và onboarding nhân sự số hóa sử dụng BullMQ cho background jobs. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp hệ thống khảo sát mức độ gắn kết nhân viên áp dụng JWT và OAuth2 cho xác thực. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý phúc lợi và bảo hiểm nhân sự áp dụng JWT và OAuth2 cho xác thực. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng nền tảng quản lý hồ sơ nhân sự điện tử (e-Profile) triển khai trên Kubernetes với zero-downtime. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp đánh giá KPI/OKR theo thời gian thực sử dụng BullMQ cho background jobs. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ tích hợp máy chấm công IoT và mobile app kết hợp Redis cache và PostgreSQL. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý đào tạo nội bộ và LMS sử dụng Elasticsearch cho tìm kiếm hồ sơ. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập hạ tầng quản lý hồ sơ nhân sự điện tử (e-Profile) triển khai trên Kubernetes với zero-downtime. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng nền tảng đánh giá KPI/OKR theo thời gian thực sử dụng QR code động cho điểm danh. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ tính toán điểm đặt hàng lại (Reorder Point) áp dụng Machine Learning (Prophet/ARIMA). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống tối ưu hóa packing và shipping áp dụng Machine Learning (Prophet/ARIMA). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý mua hàng và nhà cung cấp (PO) sử dụng FFmpeg cho video inspection. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ tối ưu hóa tuyến đường giao nhận sử dụng MQTT và IoT sensors. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun lập kế hoạch sản xuất (MES) sử dụng Time-series DB cho sensor data. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun tích hợp EDI với đối tác áp dụng rule engine cho quy tắc đặt hàng. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý chi phí logistics sử dụng barcode/QR scanner API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ theo dõi hiệu suất nhà cung cấp (Vendor Scorecard) kết hợp WebSocket cho cập nhật real-time. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý bảo trì thiết bị (CMMS) sử dụng FFmpeg cho video inspection. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý chất lượng đầu vào (IQC) kết hợp Elasticsearch cho full-text search. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình theo dõi hiệu suất nhà cung cấp (Vendor Scorecard) triển khai trên microservices với gRPC. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tối ưu hóa tuyến đường giao nhận kết hợp Apache Kafka cho event-driven. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý kho lạnh và điều kiện bảo quản sử dụng barcode/QR scanner API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ quản lý kho hàng đa vị trí (WMS) kết hợp Apache Kafka cho event-driven. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ lập kế hoạch sản xuất (MES) sử dụng FFmpeg cho video inspection. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ lập kế hoạch sản xuất (MES) sử dụng barcode/QR scanner API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý chi phí logistics tích hợp GPS tracking và geofencing. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý kho lạnh và điều kiện bảo quản áp dụng blockchain cho truy xuất nguồn gốc. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý chi phí logistics áp dụng rule engine cho quy tắc đặt hàng. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý mua hàng và nhà cung cấp (PO) kết hợp Apache Kafka cho event-driven. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ dự báo nhu cầu hàng tồn kho bằng AI kết hợp Elasticsearch cho full-text search. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý mua hàng và nhà cung cấp (PO) sử dụng MQTT và IoT sensors. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý mua hàng và nhà cung cấp (PO) tích hợp GPS tracking và geofencing. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ tích hợp EDI với đối tác triển khai trên microservices với gRPC. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc theo dõi tồn kho thời gian thực sử dụng Redis Pub/Sub cho real-time sync. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ lập kế hoạch sản xuất (MES) triển khai trên microservices với gRPC. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun theo dõi chuỗi cung ứng end-to-end tích hợp API các đơn vị vận chuyển (GHN, GHTK). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống lập kế hoạch sản xuất (MES) sử dụng FFmpeg cho video inspection. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế dự báo nhu cầu hàng tồn kho bằng AI triển khai trên microservices với gRPC. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý hợp đồng nhà cung cấp sử dụng FFmpeg cho video inspection. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế quản lý hợp đồng nhà cung cấp sử dụng MQTT và IoT sensors. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tự động hóa quy trình nhập/xuất kho bằng barcode/QR sử dụng Redis Pub/Sub cho real-time sync. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình tính toán điểm đặt hàng lại (Reorder Point) tích hợp GPS tracking và geofencing. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ theo dõi chuỗi cung ứng end-to-end áp dụng blockchain cho truy xuất nguồn gốc. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống lập kế hoạch nhu cầu nguyên vật liệu (MRP) sử dụng MQTT và IoT sensors. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình theo dõi hiệu suất nhà cung cấp (Vendor Scorecard) sử dụng FFmpeg cho video inspection. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế theo dõi chuỗi cung ứng end-to-end sử dụng barcode/QR scanner API. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế lập kế hoạch sản xuất (MES) áp dụng blockchain cho truy xuất nguồn gốc. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ quản lý hợp đồng nhà cung cấp kết hợp Apache Kafka cho event-driven. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý kho lạnh và điều kiện bảo quản áp dụng blockchain cho truy xuất nguồn gốc. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun dự báo nhu cầu hàng tồn kho bằng AI tích hợp API các đơn vị vận chuyển (GHN, GHTK). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ đồng bộ tồn kho đa kênh tích hợp GPS tracking và geofencing. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ cá nhân hóa trải nghiệm dựa trên hành vi kết hợp Firebase Cloud Messaging. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phân đoạn khách hàng động (Dynamic Segmentation) áp dụng RAG với Qdrant vector DB. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống phân đoạn khách hàng động (Dynamic Segmentation) áp dụng Real-time Analytics với ClickHouse. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun tổng đài điện toán đám mây (Cloud Contact Center) sử dụng A/B Testing framework. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ chương trình khách hàng thân thiết (Loyalty) sử dụng predictive models (XGBoost). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun theo dõi hành trình khách hàng (Customer Journey) áp dụng RAG với Qdrant vector DB. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế phân đoạn khách hàng động (Dynamic Segmentation) kết hợp CDP với identity resolution. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ đánh giá và xếp hạng tương tác nhân viên CS áp dụng Feature Flag cho personalization. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống dự báo churn và retention campaign sử dụng Kafka cho event streaming. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế cá nhân hóa trải nghiệm dựa trên hành vi kết hợp Redis và Elasticsearch. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế cá nhân hóa trải nghiệm dựa trên hành vi sử dụng Kafka cho event streaming. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ tích hợp chatbot AI hỗ trợ 24/7 tích hợp WebSocket và Socket.io. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình cá nhân hóa trải nghiệm dựa trên hành vi sử dụng predictive models (XGBoost). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun tự động gửi email/SMS follow-up kết hợp CDP với identity resolution. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý phễu bán hàng (Sales Funnel) áp dụng RAG với Qdrant vector DB. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phân tích cảm xúc khách hàng (Sentiment Analysis) sử dụng Session Replay và Heatmaps. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc dự báo churn và retention campaign sử dụng NLP và PhoBERT cho tiếng Việt. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun chương trình khách hàng thân thiết (Loyalty) sử dụng A/B Testing framework. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý kiến thức hỗ trợ (Knowledge Base) sử dụng A/B Testing framework. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc chương trình khách hàng thân thiết (Loyalty) sử dụng NLP và PhoBERT cho tiếng Việt. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ chăm sóc khách hàng đa kênh (Omnichannel) sử dụng predictive models (XGBoost). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ theo dõi hành trình khách hàng (Customer Journey) tích hợp OpenAI/LLM cho chatbot. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ dự báo churn và retention campaign sử dụng predictive models (XGBoost). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế theo dõi hành trình khách hàng (Customer Journey) kết hợp CDP với identity resolution. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế tự động gửi email/SMS follow-up sử dụng NLP và PhoBERT cho tiếng Việt. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ tự động gửi email/SMS follow-up áp dụng Feature Flag cho personalization. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phân tích cảm xúc khách hàng (Sentiment Analysis) áp dụng Feature Flag cho personalization. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc chăm sóc khách hàng đa kênh (Omnichannel) kết hợp CDP với identity resolution. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tự động phân phối ticket hỗ trợ kết hợp CDP với identity resolution. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý chiến dịch marketing automation kết hợp CDP với identity resolution. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ quản lý phễu bán hàng (Sales Funnel) tích hợp OpenAI/LLM cho chatbot. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc tích hợp chatbot AI hỗ trợ 24/7 sử dụng Kafka cho event streaming. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ theo dõi NPS và CSAT theo thời gian thực tích hợp OpenAI/LLM cho chatbot. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc dự báo churn và retention campaign áp dụng RAG với Qdrant vector DB. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun cá nhân hóa trải nghiệm dựa trên hành vi áp dụng Collaborative Filtering. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ chăm sóc khách hàng đa kênh (Omnichannel) kết hợp Redis và Elasticsearch. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc theo dõi NPS và CSAT theo thời gian thực sử dụng Session Replay và Heatmaps. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc đánh giá và xếp hạng tương tác nhân viên CS sử dụng A/B Testing framework. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý kiến thức hỗ trợ (Knowledge Base) tích hợp WebSocket và Socket.io. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống tự động gửi email/SMS follow-up sử dụng NLP và PhoBERT cho tiếng Việt. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ theo dõi NPS và CSAT theo thời gian thực kết hợp Firebase Cloud Messaging. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ đánh giá và xếp hạng tương tác nhân viên CS áp dụng RAG với Qdrant vector DB. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ tự động hóa quy trình phê duyệt chi sử dụng Two-Phase Commit cho giao dịch. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý hợp đồng tài chính điện tử sử dụng ClickHouse cho analytics tài chính. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế đối soát giao dịch ngân hàng kết hợp OCR cho hóa đơn và chứng từ. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế tuân thủ PCI-DSS và mã hóa dữ liệu thẻ áp dụng rule engine cho quy tắc thuế. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc theo dõi công nợ phải thu/phải trả kết hợp Webhook cho IPN callback. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý ngân sách và kiểm soát chi tích hợp API ngân hàng và SWIFT. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ phát hiện gian lận giao dịch (Fraud Detection) triển khai trên Zero-Trust Architecture. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tự động hóa quy trình phê duyệt chi triển khai trên Zero-Trust Architecture. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quản lý ngân sách và kiểm soát chi sử dụng Redis cho distributed lock. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý dòng tiền (Cash Flow) kết hợp Webhook cho IPN callback. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý thuế và kê khai tự động áp dụng Event Sourcing cho sổ cái. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế kế toán số và sổ cái điện tử sử dụng AES-256 và KMS cho mã hóa. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình tuân thủ PCI-DSS và mã hóa dữ liệu thẻ kết hợp Webhook cho IPN callback. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình báo cáo tài chính theo chuẩn IFRS sử dụng JWT và mTLS cho bảo mật. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý hợp đồng tài chính điện tử triển khai trên Zero-Trust Architecture. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ chấm điểm tín dụng (Credit Scoring) tích hợp Timestamp Authority (TSA). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun báo cáo tài chính theo chuẩn IFRS tích hợp API ngân hàng và SWIFT. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình phát hành hóa đơn điện tử (e-Invoice) sử dụng Redis cho distributed lock. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun phát hiện gian lận giao dịch (Fraud Detection) áp dụng Machine Learning (Random Forest/XGBoost). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ phát hiện gian lận giao dịch (Fraud Detection) áp dụng rule engine cho quy tắc thuế. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc theo dõi công nợ phải thu/phải trả triển khai trên Zero-Trust Architecture. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình phát hiện gian lận giao dịch (Fraud Detection) sử dụng Two-Phase Commit cho giao dịch. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ tự động hóa quy trình phê duyệt chi triển khai trên Zero-Trust Architecture. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phát hiện gian lận giao dịch (Fraud Detection) kết hợp Blockchain cho minh bạch. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ phân tích rủi ro tài chính áp dụng Immutable Logs (WORM). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun chấm điểm tín dụng (Credit Scoring) áp dụng Machine Learning (Random Forest/XGBoost). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc chấm điểm tín dụng (Credit Scoring) sử dụng ClickHouse cho analytics tài chính. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun báo cáo tài chính theo chuẩn IFRS kết hợp OCR cho hóa đơn và chứng từ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình báo cáo tài chính theo chuẩn IFRS sử dụng AES-256 và KMS cho mã hóa. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc quản lý hợp đồng tài chính điện tử sử dụng JWT và mTLS cho bảo mật. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống tích hợp chữ ký số HSM kết hợp OCR cho hóa đơn và chứng từ. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống xử lý giao dịch xuyên biên giới sử dụng Two-Phase Commit cho giao dịch. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc theo dõi công nợ phải thu/phải trả sử dụng ClickHouse cho analytics tài chính. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý ví điện tử nội bộ tích hợp API ngân hàng và SWIFT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý ví điện tử nội bộ sử dụng AES-256 và KMS cho mã hóa. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý hợp đồng tài chính điện tử sử dụng ClickHouse cho analytics tài chính. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình chấm điểm tín dụng (Credit Scoring) áp dụng rule engine cho quy tắc thuế. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý hợp đồng tài chính điện tử áp dụng rule engine cho quy tắc thuế. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý dòng tiền (Cash Flow) tích hợp Timestamp Authority (TSA). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế phát hiện gian lận giao dịch (Fraud Detection) áp dụng Machine Learning (Random Forest/XGBoost). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý hợp đồng tài chính điện tử áp dụng Immutable Logs (WORM). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình tích hợp cổng thanh toán VnPay/Momo áp dụng Immutable Logs (WORM). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ omnichannel inventory sync sử dụng Kafka cho order events. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình giỏ hàng và thanh toán phức hợp sử dụng Vector DB cho recommendation. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống dynamic pricing theo nhu cầu tích hợp WebRTC và HLS cho livestream. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống giỏ hàng và thanh toán phức hợp tích hợp WebRTC và HLS cho livestream. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống theo dõi cart abandonment áp dụng Collaborative Filtering + Content-based. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý campaign khuyến mãi tích hợp API vận chuyển GHN/GHTK/Viettel. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tìm kiếm thông minh và autocomplete sử dụng Vector DB cho recommendation. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý tồn kho flash sale áp dụng Geofencing cho delivery. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun quản lý tồn kho flash sale sử dụng Kafka cho order events. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống tích hợp TikTok Shop và Facebook Shop áp dụng Geofencing cho delivery. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc cá nhân hóa gợi ý sản phẩm kết hợp Elasticsearch fuzzy search. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ sàn thương mại B2B và marketplace sử dụng Vector DB cho recommendation. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun live streaming bán hàng áp dụng Rate Limiting tại API Gateway. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý seller và commission kết hợp CDN Cloudflare/CloudFront. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun xử lý đổi trả hàng tự động tích hợp API vận chuyển GHN/GHTK/Viettel. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống omnichannel inventory sync kết hợp Session Replay cho UX. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun omnichannel inventory sync áp dụng GraphQL để giảm over-fetching. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế omnichannel inventory sync áp dụng Collaborative Filtering + Content-based. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ theo dõi cart abandonment áp dụng Rate Limiting tại API Gateway. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình tìm kiếm thông minh và autocomplete kết hợp CDN Cloudflare/CloudFront. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý affiliate và referral kết hợp Session Replay cho UX. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quản lý đánh giá và phản hồi sản phẩm sử dụng Serverless Lambda cho image processing. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tìm kiếm thông minh và autocomplete áp dụng Geofencing cho delivery. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý affiliate và referral sử dụng Optimistic Locking và Redis. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý tồn kho flash sale triển khai Feature Flag và A/B Testing. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ quản lý đánh giá và phản hồi sản phẩm áp dụng GraphQL để giảm over-fetching. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ quản lý seller và commission sử dụng Optimistic Locking và Redis. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ điểm bán hàng (POS) offline/online tích hợp WebRTC và HLS cho livestream. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình quản lý seller và commission áp dụng Rate Limiting tại API Gateway. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý campaign khuyến mãi triển khai Feature Flag và A/B Testing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun tích hợp TikTok Shop và Facebook Shop tích hợp WebRTC và HLS cho livestream. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tích hợp TikTok Shop và Facebook Shop tích hợp API vận chuyển GHN/GHTK/Viettel. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý campaign khuyến mãi sử dụng BullMQ cho background jobs. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ omnichannel inventory sync sử dụng Vector DB cho recommendation. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ dynamic pricing theo nhu cầu sử dụng Vector DB cho recommendation. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tích hợp TikTok Shop và Facebook Shop sử dụng Kafka cho order events. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun cá nhân hóa gợi ý sản phẩm áp dụng GraphQL để giảm over-fetching. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế cá nhân hóa gợi ý sản phẩm tích hợp WebRTC và HLS cho livestream. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ live streaming bán hàng áp dụng Rate Limiting tại API Gateway. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ sàn thương mại B2B và marketplace kết hợp Session Replay cho UX. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ theo dõi đơn hàng thời gian thực áp dụng GraphQL để giảm over-fetching. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ giỏ hàng và thanh toán phức hợp sử dụng Vector DB cho recommendation. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý phòng họp và đặt lịch sử dụng Workflow Engine (Camunda/Temporal). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý công việc và task assignment tích hợp Calendar API. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun tự động hóa luồng phê duyệt (Workflow) áp dụng Feature Flag cho rollout. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình quản lý lịch làm việc chung triển khai trên microservices. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế quản lý dự án và Kanban board sử dụng Elasticsearch cho full-text search tài liệu. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun lưu trữ tài liệu điện tử (EDMS) kết hợp OCR và NLP cho trích xuất hợp đồng. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý thay đổi và change request tích hợp Calendar API. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế quản lý công việc và task assignment áp dụng Event-Driven với Kafka. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ lưu trữ tài liệu điện tử (EDMS) tích hợp WebSocket cho collaborative editing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc tự động hóa onboarding nhân sự nội bộ áp dụng Feature Flag cho rollout. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ tích hợp e-signature HSM/OTP kết hợp OCR và NLP cho trích xuất hợp đồng. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình theo dõi chi phí vận hành kết hợp PDF Generator (Puppeteer). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc theo dõi chi phí vận hành áp dụng Feature Flag cho rollout. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống tự động hóa onboarding nhân sự nội bộ sử dụng Prometheus/Grafana cho monitoring. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ quản lý tài liệu phiên bản (Version Control) sử dụng Elasticsearch cho full-text search tài liệu. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế tự động hóa quy trình nội bộ áp dụng Operational Transformation (OT/CRDT). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun theo dõi tiến độ dự án real-time sử dụng Workflow Engine (Camunda/Temporal). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình tự động hóa onboarding nhân sự nội bộ triển khai trên microservices. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống tự động hóa quy trình nội bộ sử dụng Elasticsearch cho full-text search tài liệu. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình lưu trữ tài liệu điện tử (EDMS) tích hợp Calendar API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý thay đổi và change request tích hợp Calendar API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc hợp đồng điện tử và chữ ký số sử dụng S3 Presigned URL cho file storage. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý phòng họp và đặt lịch kết hợp PDF Generator (Puppeteer). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quản lý dự án và Kanban board áp dụng Operational Transformation (OT/CRDT). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ phê duyệt chi tiêu và ngân sách kết hợp React DnD cho Kanban. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tự động hóa báo cáo định kỳ sử dụng Elasticsearch cho full-text search tài liệu. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình phê duyệt chi tiêu và ngân sách kết hợp React DnD cho Kanban. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý tài sản văn phòng sử dụng Prometheus/Grafana cho monitoring. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ tự động hóa luồng phê duyệt (Workflow) kết hợp React DnD cho Kanban. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý phòng họp và đặt lịch áp dụng Feature Flag cho rollout. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế quản lý lịch làm việc chung sử dụng S3 Presigned URL cho file storage. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ theo dõi tiến độ dự án real-time áp dụng Feature Flag cho rollout. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình lưu trữ tài liệu điện tử (EDMS) triển khai trên microservices. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý kiến thức nội bộ (Knowledge Base) áp dụng RBAC và audit log. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế quản lý kiến thức nội bộ (Knowledge Base) kết hợp OCR và NLP cho trích xuất hợp đồng. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tự động hóa báo cáo định kỳ kết hợp PDF Generator (Puppeteer). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống phê duyệt chi tiêu và ngân sách kết hợp React DnD cho Kanban. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ quản lý kiến thức nội bộ (Knowledge Base) kết hợp React DnD cho Kanban. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống theo dõi hiệu suất quy trình (Process Mining) triển khai trên microservices. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý tài liệu phiên bản (Version Control) sử dụng S3 Presigned URL cho file storage. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình phê duyệt chi tiêu và ngân sách áp dụng Event-Driven với Kafka. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ quản lý phòng họp và đặt lịch sử dụng S3 Presigned URL cho file storage. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý rác thải thông minh sử dụng Protocol Buffers và gRPC. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun giám sát đội xe (Fleet Management) tích hợp Google Maps / OpenStreetMap API. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ theo dõi vị trí GPS thời gian thực sử dụng Kafka Streams cho real-time processing. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý kho lạnh di động kết hợp Redis Geo cho location queries. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ quản lý năng lượng tự động triển khai trên Kubernetes edge clusters. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế theo dõi hành trình xe công cộng sử dụng Protocol Buffers và gRPC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ hệ thống cảnh báo cháy thông minh kết hợp Grafana cho visualization. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình cảnh báo vượt ngưỡng môi trường triển khai trên Kubernetes edge clusters. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế tích hợp cảm biến nhiệt độ/độ ẩm/pH tích hợp GPS, LoRaWAN, NB-IoT. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế nông nghiệp thông minh (Smart Agriculture) sử dụng Kafka Streams cho real-time processing. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ tối ưu hóa lịch bảo trì thiết bị IoT sử dụng Kafka Streams cho real-time processing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ giám sát chất lượng không khí kết hợp Grafana cho visualization. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình thu thập dữ liệu cảm biến IoT triển khai trên Kubernetes edge clusters. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình quản lý container và logistics cảng áp dụng Computer Vision cho camera. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý rác thải thông minh sử dụng Protocol Buffers và gRPC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ cảnh báo vượt ngưỡng môi trường áp dụng AI anomaly detection. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ hệ thống cảnh báo cháy thông minh sử dụng MQTT Protocol và message broker. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình tích hợp cảm biến nhiệt độ/độ ẩm/pH kết hợp Redis Geo cho location queries. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình bãi đỗ xe thông minh (Smart Parking) áp dụng Edge Computing và Fog nodes. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý năng lượng tự động kết hợp Grafana cho visualization. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun tối ưu hóa lịch bảo trì thiết bị IoT sử dụng Protocol Buffers và gRPC. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống thu thập dữ liệu cảm biến IoT kết hợp Redis Geo cho location queries. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun theo dõi hành trình xe công cộng áp dụng OTA firmware update. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ tích hợp Telegram Bot cảnh báo sử dụng Device Shadow (AWS IoT). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun theo dõi tiêu hao nhiên liệu kết hợp Grafana cho visualization. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc theo dõi tiêu hao nhiên liệu tích hợp Google Maps / OpenStreetMap API. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống tích hợp Telegram Bot cảnh báo kết hợp Time-series DB (InfluxDB/TimescaleDB). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ cảnh báo vượt ngưỡng môi trường sử dụng Device Shadow (AWS IoT). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý năng lượng tự động áp dụng OTA firmware update. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình theo dõi vị trí GPS thời gian thực sử dụng Device Shadow (AWS IoT). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống bãi đỗ xe thông minh (Smart Parking) áp dụng Computer Vision cho camera. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý container và logistics cảng áp dụng Computer Vision cho camera. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế cảnh báo vượt ngưỡng môi trường sử dụng WebSocket và SSE cho dashboard. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế theo dõi vị trí GPS thời gian thực áp dụng Edge Computing và Fog nodes. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc tích hợp Telegram Bot cảnh báo tích hợp Google Maps / OpenStreetMap API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình giám sát an ninh khu vực bằng camera AI áp dụng Edge Computing và Fog nodes. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý đèn đường thông minh triển khai trên Kubernetes edge clusters. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý rác thải thông minh sử dụng Protocol Buffers và gRPC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế nông nghiệp thông minh (Smart Agriculture) triển khai trên Kubernetes edge clusters. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ hệ thống cảnh báo cháy thông minh sử dụng Device Shadow (AWS IoT). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tối ưu hóa quy trình giám sát chất lượng không khí tích hợp GPS, LoRaWAN, NB-IoT. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình quản lý năng lượng tự động tích hợp GPS, LoRaWAN, NB-IoT. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý phòng thí nghiệm và thiết bị sử dụng Vector DB (Qdrant) cho RAG. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống theo dõi sức khỏe học đường sử dụng Vector DB (Qdrant) cho RAG. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống theo dõi tuân thủ điều trị sử dụng Time-series cho vital signs. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ đặt lịch khám và xếp hàng thông minh áp dụng Biometric authentication. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý hồ sơ bệnh án điện tử áp dụng Biometric authentication. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế thi trực tuyến và giám sát AI sử dụng Blockchain cho chứng chỉ. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ tích hợp bảo hiểm y tế điện tử sử dụng HL7 FHIR cho interoperability. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý trường học thông minh kết hợp WebRTC cho telehealth. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý tiêm chủng và vaccine áp dụng Computer Vision cho giám sát thi. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế hỗ trợ trợ lý AI giảng dạy (RAG) sử dụng Blockchain cho chứng chỉ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ theo dõi tiến độ học tập sinh viên sử dụng Vector DB (Qdrant) cho RAG. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ quản lý chứng chỉ điện tử áp dụng Differential Privacy cho dữ liệu y tế. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình quản lý nhà thuốc và kê đơn áp dụng Computer Vision cho giám sát thi. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc hỗ trợ trợ lý AI giảng dạy (RAG) áp dụng Apriori/FP-Growth cho association rules. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý bệnh viện (HIS/EMR) sử dụng Vector DB (Qdrant) cho RAG. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun tích hợp bảo hiểm y tế điện tử áp dụng Apriori/FP-Growth cho association rules. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc hệ thống LMS và video HLS kết hợp WebRTC cho telehealth. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý bệnh viện (HIS/EMR) áp dụng Biometric authentication. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ theo dõi tuân thủ điều trị tích hợp HLS streaming và DRM. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình phân tích dữ liệu y khoa (Data Mining) tích hợp eKYC và chữ ký số. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý trường học thông minh sử dụng HL7 FHIR cho interoperability. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ phát hiện gian lận thi cử bằng AI kết hợp WebRTC cho telehealth. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ hỗ trợ trợ lý AI giảng dạy (RAG) áp dụng Computer Vision cho giám sát thi. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình hệ thống LMS và video HLS tích hợp eKYC và chữ ký số. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý phòng thí nghiệm và thiết bị sử dụng Time-series cho vital signs. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc thi trực tuyến và giám sát AI kết hợp Elasticsearch cho tìm kiếm hồ sơ. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc tích hợp thiết bị y tế IoT sử dụng HL7 FHIR cho interoperability. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ tích hợp bảo hiểm y tế điện tử triển khai trên private cloud bảo mật cao. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ thi trực tuyến và giám sát AI tích hợp eKYC và chữ ký số. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ khám bệnh từ xa (Telehealth) kết hợp OCR cho hồ sơ giấy. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ thi trực tuyến và giám sát AI kết hợp Elasticsearch cho tìm kiếm hồ sơ. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý hồ sơ bệnh án điện tử tích hợp eKYC và chữ ký số. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống khám bệnh từ xa (Telehealth) áp dụng Differential Privacy cho dữ liệu y tế. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý trường học thông minh áp dụng Differential Privacy cho dữ liệu y tế. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý nhà thuốc và kê đơn kết hợp Elasticsearch cho tìm kiếm hồ sơ. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý phòng thí nghiệm và thiết bị tích hợp HLS streaming và DRM. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ quản lý trường học thông minh áp dụng Differential Privacy cho dữ liệu y tế. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống tích hợp thiết bị y tế IoT kết hợp Elasticsearch cho tìm kiếm hồ sơ. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế hỗ trợ trợ lý AI giảng dạy (RAG) sử dụng Vector DB (Qdrant) cho RAG. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quản lý bệnh viện (HIS/EMR) áp dụng Computer Vision cho giám sát thi. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ đặt lịch khám và xếp hàng thông minh áp dụng Biometric authentication. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống theo dõi tiến độ học tập sinh viên sử dụng Vector DB (Qdrant) cho RAG. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế phân tích log tập trung (ELK Stack) sử dụng OPA (Open Policy Agent) cho ABAC. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun quản lý API Gateway và Rate Limiting triển khai WAF Cloudflare/AWS WAF. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun Zero Trust Access Control sử dụng OPA (Open Policy Agent) cho ABAC. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống phát hiện gian lận bằng ML sử dụng Prometheus, Grafana, ELK. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống trợ lý AI tri thức (RAG) triển khai WAF Cloudflare/AWS WAF. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc chống rò rỉ dữ liệu (DLP) triển khai WAF Cloudflare/AWS WAF. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý định danh và SSO (IAM) áp dụng Apache Airflow cho ETL. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý định danh và SSO (IAM) áp dụng AES-256, TLS 1.3, mTLS. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ ẩn danh hóa dữ liệu (Data Anonymization) áp dụng Differential Privacy và k-Anonymity. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ Zero Trust Access Control sử dụng OPA (Open Policy Agent) cho ABAC. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc chống rò rỉ dữ liệu (DLP) áp dụng eBPF và Falco cho runtime security. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ phân tích log tập trung (ELK Stack) triển khai WAF Cloudflare/AWS WAF. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc theo dõi distributed tracing kết hợp SIEM (Wazuh/Splunk). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc phân tích log tập trung (ELK Stack) sử dụng Kafka + Schema Registry. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ phân tích log tập trung (ELK Stack) áp dụng Apache Airflow cho ETL. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ phân tích dữ liệu lớn (Big Data Pipeline) tích hợp SonarQube và dependency scanners. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý định danh và SSO (IAM) kết hợp SIEM (Wazuh/Splunk). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun phân tích log tập trung (ELK Stack) kết hợp OpenTelemetry và Jaeger. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế tự động hóa compliance reporting sử dụng Qdrant/Weaviate + LLM cho RAG. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ chống rò rỉ dữ liệu (DLP) kết hợp ClickHouse/Flink cho streaming analytics. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc trợ lý AI tri thức (RAG) sử dụng Prometheus, Grafana, ELK. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý quyền truy cập ABAC/RBAC kết hợp OpenTelemetry và Jaeger. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ phân tích dữ liệu lớn (Big Data Pipeline) tích hợp SonarQube và dependency scanners. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ chống rò rỉ dữ liệu (DLP) áp dụng Apache Airflow cho ETL. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ chống rò rỉ dữ liệu (DLP) áp dụng eBPF và Falco cho runtime security. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ phân tích log tập trung (ELK Stack) kết hợp SIEM (Wazuh/Splunk). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống bảo vệ chống DDoS và WAF sử dụng Vector Search và BM25 hybrid. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống giám sát an ninh mạng (SIEM) sử dụng Prometheus, Grafana, ELK. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý quyền truy cập ABAC/RBAC sử dụng Qdrant/Weaviate + LLM cho RAG. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý schema và data lineage tích hợp SonarQube và dependency scanners. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun phân tích dữ liệu lớn (Big Data Pipeline) sử dụng Kafka + Schema Registry. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun phát hiện gian lận bằng ML tích hợp HashiCorp Vault và KMS. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc Zero Trust Access Control áp dụng Apache Airflow cho ETL. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ quét lỗ hổng tự động (Vulnerability Scanner) sử dụng Kafka + Schema Registry. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun trợ lý AI tri thức (RAG) áp dụng AES-256, TLS 1.3, mTLS. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý định danh và SSO (IAM) sử dụng Prometheus, Grafana, ELK. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc quản lý API Gateway và Rate Limiting áp dụng Differential Privacy và k-Anonymity. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc mã hóa dữ liệu at-rest và in-transit tích hợp HashiCorp Vault và KMS. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun quản lý quyền truy cập ABAC/RBAC kết hợp ClickHouse/Flink cho streaming analytics. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý schema và data lineage triển khai WAF Cloudflare/AWS WAF. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ trợ lý AI tri thức (RAG) tích hợp HashiCorp Vault và KMS. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý vận hành tòa nhà/chung cư tích hợp chữ ký số và e-Contract. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý phí dịch vụ và công nợ cư dân áp dụng Geofencing cho khu vực dự án. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ tích hợp bản đồ và 3D tour kết hợp IoT sensors và MQTT. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tối ưu hóa quy trình quản lý hợp đồng mua bán điện tử áp dụng OCR cho giấy tờ pháp lý. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc quản lý quỹ bảo trì chung cư sử dụng Document Management với versioning. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ quản lý hợp đồng thuê kết hợp Elasticsearch cho tìm kiếm bất động sản. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý vận hành tòa nhà/chung cư triển khai mobile app với biometric. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ hệ thống đặt tiện ích online kết hợp Elasticsearch cho tìm kiếm bất động sản. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý hợp đồng mua bán điện tử sử dụng Time-series DB cho utility data. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý vận hành tòa nhà/chung cư áp dụng 3D visualization (Three.js/WebGL). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý nhà môi giới và hoa hồng kết hợp IoT sensors và MQTT. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý bãi đỗ xe và thẻ ra vào kết hợp Elasticsearch cho tìm kiếm bất động sản. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc tích hợp IoT cho smart building kết hợp IoT sensors và MQTT. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tích hợp bản đồ và 3D tour tích hợp chữ ký số và e-Contract. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế quản lý hợp đồng thuê sử dụng QR/RFID cho access control. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ quản lý nhà môi giới và hoa hồng áp dụng 3D visualization (Three.js/WebGL). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ theo dõi tài sản cố định và khấu hao áp dụng OCR cho giấy tờ pháp lý. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ đặt lịch bảo trì và sửa chữa áp dụng Predictive Analytics cho maintenance. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun đặt lịch bảo trì và sửa chữa áp dụng Geofencing cho khu vực dự án. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình hệ thống đặt tiện ích online áp dụng Geofencing cho khu vực dự án. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình hệ thống đặt tiện ích online tích hợp Payment Gateway. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ tích hợp bản đồ và 3D tour áp dụng OCR cho giấy tờ pháp lý. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý tiện ích và dịch vụ cư dân triển khai mobile app với biometric. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ hệ thống đặt tiện ích online sử dụng GIS và Google Maps API. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý sổ đỏ và pháp lý dự án triển khai mobile app với biometric. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống phân phối dự án bất động sản (PropTech) áp dụng 3D visualization (Three.js/WebGL). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý hợp đồng thuê áp dụng Predictive Analytics cho maintenance. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc phân tích giá thị trường bất động sản áp dụng Predictive Analytics cho maintenance. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống phân tích giá thị trường bất động sản sử dụng Blockchain cho ownership record. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ tích hợp bản đồ và 3D tour áp dụng Predictive Analytics cho maintenance. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế phân phối dự án bất động sản (PropTech) triển khai mobile app với biometric. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý hợp đồng thuê sử dụng QR/RFID cho access control. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý bãi đỗ xe và thẻ ra vào sử dụng Document Management với versioning. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình tích hợp IoT cho smart building sử dụng QR/RFID cho access control. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý nhà môi giới và hoa hồng áp dụng 3D visualization (Three.js/WebGL). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý hợp đồng mua bán điện tử áp dụng Geofencing cho khu vực dự án. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống tích hợp bản đồ và 3D tour kết hợp IoT sensors và MQTT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý quỹ bảo trì chung cư tích hợp Payment Gateway. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ hệ thống khiếu nại cư dân sử dụng Document Management với versioning. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế tích hợp bản đồ và 3D tour kết hợp IoT sensors và MQTT. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý nhà môi giới và hoa hồng sử dụng Time-series DB cho utility data. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế cổng thông tin công khai dữ liệu mở sử dụng Data Anonymization cho dữ liệu công. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý hộ tịch và hộ khẩu điện tử kết hợp OCR và NLP cho văn bản. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế tích hợp bản đồ địa chính kết hợp eKYC và Liveness Detection. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ cổng dịch vụ công một cửa điện tử áp dụng Digital Signature và Timestamp. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế tích hợp định danh quốc gia (VNeID) áp dụng Digital Signature và Timestamp. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý giấy tờ tùy thân điện tử áp dụng Blockchain cho minh bạch. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun hệ thống công khai minh bạch ngân sách kết hợp Notification đa kênh (SMS/Zalo/App). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý đăng ký kinh doanh online sử dụng Open Data standards (CKAN). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế cổng thông tin công khai dữ liệu mở kết hợp OCR và NLP cho văn bản. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý thủ tục hành chính điện tử kết hợp Notification đa kênh (SMS/Zalo/App). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý tài sản công sử dụng OpenID Connect và SAML cho SSO. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý giấy tờ tùy thân điện tử triển khai trên hạ tầng chính phủ bảo mật cao. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý tài sản công tích hợp API định danh quốc gia. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ hệ thống công khai minh bạch ngân sách áp dụng Accessibility standards (WCAG). Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tích hợp chữ ký số công chức tích hợp GIS cho bản đồ hành chính. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình quản lý tài sản công áp dụng Accessibility standards (WCAG). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc tích hợp bản đồ địa chính sử dụng Immutable Audit Logs. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế tích hợp định danh quốc gia (VNeID) áp dụng Accessibility standards (WCAG). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế theo dõi tiến độ hồ sơ công dân sử dụng OpenID Connect và SAML cho SSO. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý hộ tịch và hộ khẩu điện tử sử dụng Open Data standards (CKAN). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun hệ thống công khai minh bạch ngân sách kết hợp eKYC và Liveness Detection. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý tài sản công sử dụng Open Data standards (CKAN). Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế hệ thống bỏ phiếu điện tử nội bộ kết hợp eKYC và Liveness Detection. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình tích hợp chữ ký số công chức sử dụng Open Data standards (CKAN). Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý hồ sơ cán bộ công chức kết hợp OCR và NLP cho văn bản. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý giấy tờ tùy thân điện tử kết hợp OCR và NLP cho văn bản. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý giấy tờ tùy thân điện tử sử dụng OpenID Connect và SAML cho SSO. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý đăng ký kinh doanh online áp dụng Accessibility standards (WCAG). Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý hồ sơ cán bộ công chức sử dụng Workflow Engine cho quy trình hành chính. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế tự động hóa quy trình phê duyệt hành chính triển khai trên hạ tầng chính phủ bảo mật cao. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống số hóa văn bản hành chính công sử dụng OpenID Connect và SAML cho SSO. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ tiếp nhận và xử lý phản ánh công dân sử dụng Immutable Audit Logs. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc đối soát ngân sách và chi tiêu công áp dụng Accessibility standards (WCAG). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ hệ thống công khai minh bạch ngân sách kết hợp eKYC và Liveness Detection. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ hệ thống bỏ phiếu điện tử nội bộ tích hợp GIS cho bản đồ hành chính. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình số hóa văn bản hành chính công kết hợp eKYC và Liveness Detection. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống tích hợp bản đồ địa chính áp dụng Multi-Factor Authentication bắt buộc. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế hệ thống công khai minh bạch ngân sách kết hợp OCR và NLP cho văn bản. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý giấy tờ tùy thân điện tử áp dụng Multi-Factor Authentication bắt buộc. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế số hóa văn bản hành chính công sử dụng Immutable Audit Logs. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun tích hợp bản đồ địa chính sử dụng Immutable Audit Logs. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý review và ranking trên OTA kết hợp CRM và guest profiling. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý review và ranking trên OTA áp dụng Recommendation Engine. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống tích hợp thanh toán đa tiền tệ áp dụng Geofencing cho local offers. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ tích hợp check-in/check-out di động sử dụng IoT cho room automation. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ dynamic pricing phòng và dịch vụ sử dụng Channel Manager API (Booking.com, Agoda). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý nhà hàng và F&B kết hợp CRM và guest profiling. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình quản lý nhà hàng và F&B áp dụng Geofencing cho local offers. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun theo dõi chi phí vận hành khách sạn sử dụng Channel Manager API (Booking.com, Agoda). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ đặt phòng trực tuyến (Booking Engine) áp dụng Geofencing cho local offers. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý lịch trình tour real-time sử dụng OCR cho passport scanning. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý group booking và event triển khai mobile check-in với QR/NFC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống theo dõi occupancy và revenue management sử dụng WebSocket cho real-time availability. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý lịch trình tour real-time sử dụng WebSocket cho real-time availability. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ hệ thống loyalty cho khách hàng thân thiết sử dụng OCR cho passport scanning. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tối ưu hóa quy trình quản lý review và ranking trên OTA áp dụng Recommendation Engine. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý spa và tiện ích áp dụng Recommendation Engine. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý tour và vận chuyển du lịch sử dụng IoT cho room automation. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun hệ thống loyalty cho khách hàng thân thiết áp dụng Revenue Management algorithms. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý lịch trình tour real-time kết hợp Dynamic Pricing ML models. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ hệ thống đặt bàn và order F&B sử dụng WebSocket cho real-time availability. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc quản lý nhà hàng và F&B sử dụng IoT cho room automation. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ theo dõi chi phí vận hành khách sạn sử dụng Channel Manager API (Booking.com, Agoda). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý trải nghiệm khách hàng tại chỗ tích hợp Payment Gateway quốc tế. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun quản lý review và ranking trên OTA áp dụng Recommendation Engine. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý khách sạn (PMS) áp dụng Multi-currency và real-time FX. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tối ưu hóa quy trình đặt phòng trực tuyến (Booking Engine) áp dụng Multi-currency và real-time FX. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tích hợp thanh toán đa tiền tệ áp dụng Recommendation Engine. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống theo dõi carbon footprint và sustainability áp dụng Multi-currency và real-time FX. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ tích hợp thanh toán đa tiền tệ triển khai mobile check-in với QR/NFC. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế tích hợp bản đồ và hướng dẫn du lịch áp dụng Recommendation Engine. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý trải nghiệm khách hàng tại chỗ tích hợp PMS với POS và Accounting. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý nhà hàng và F&B triển khai mobile check-in với QR/NFC. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý group booking và event kết hợp Dynamic Pricing ML models. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ theo dõi chi phí vận hành khách sạn tích hợp PMS với POS và Accounting. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý spa và tiện ích tích hợp PMS với POS và Accounting. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế quản lý tour và vận chuyển du lịch triển khai mobile check-in với QR/NFC. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tối ưu hóa quy trình quản lý tour và vận chuyển du lịch áp dụng Geofencing cho local offers. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý tour và vận chuyển du lịch sử dụng Sentiment Analysis cho reviews. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ hệ thống đặt bàn và order F&B kết hợp CRM và guest profiling. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế tích hợp thanh toán đa tiền tệ sử dụng Sentiment Analysis cho reviews. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun theo dõi occupancy và revenue management áp dụng Geofencing cho local offers. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Hệ thống Quản trị Nhân sự & Số hóa Quy trình Nội bộ Doanh nghiệp,"Giải pháp phần mềm tập trung giúp doanh nghiệp tự động hóa chấm công, phê duyệt đơn từ trực tuyến và xuất báo cáo doanh thu theo thời gian thực. Hệ thống hỗ trợ số hóa toàn bộ tài liệu, tăng cường bảo mật và tối ưu hóa chi phí vận hành trên hạ tầng đám mây tiên tiến."
+Nền tảng Tự động hóa Vận hành & Quản lý Nhân sự Tập trung,"Nền tảng Cloud Native mang đến giải pháp chuẩn hóa quy trình làm việc nội bộ, giảm thiểu thao tác thủ công và nâng cao hiệu suất làm việc. Ứng dụng cho phép tùy biến linh hoạt các mô-đun chức năng, đảm bảo triển khai đồng bộ và an toàn dữ liệu cho từng đơn vị thành viên."
+Giải pháp Số hóa Quy trình Doanh nghiệp trên Nền tảng Đám mây,"Hệ thống tích hợp toàn diện nhằm quản lý nguồn nhân lực và tối ưu luồng công việc nội bộ. Bằng việc áp dụng công nghệ đám mây hiện đại, phần mềm giúp cắt giảm đáng kể chi phí quản lý, trích xuất dữ liệu báo cáo chính xác và đáp ứng khắt khe các tiêu chuẩn của đối tác chiến lược."
+Hệ thống Quản trị Doanh nghiệp Thông minh & Tối ưu Chi phí Vận hành,"Ứng dụng chuyên nghiệp hỗ trợ ban lãnh đạo giám sát và điều hành toàn bộ quy trình hành chính - nhân sự liên thông. Tính năng xử lý dữ liệu tập trung và báo cáo thời gian thực giúp đưa ra quyết định kinh doanh nhanh chóng, đồng thời đảm bảo tiến độ cài đặt mượt mà cho toàn hệ thống."
+Nền tảng Tích hợp Quản lý Nhân sự & Phê duyệt Trực tuyến Enterprise,"Giải pháp số hóa dành riêng cho các doanh nghiệp quy mô lớn, tích hợp chặt chẽ giữa chấm công tự động, xét duyệt công văn và quản trị nhân sự. Hệ thống được thiết kế với độ tùy biến cao, bảo mật vững chắc và khả năng mở rộng linh hoạt theo sự phát triển của doanh nghiệp."
+Tích hợp giải pháp chấm công sinh trắc học kết hợp Face Recognition và Geofencing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý ca làm việc thông minh sử dụng Workflow Engine và thông báo real-time. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun phê duyệt nghỉ phép trực tuyến áp dụng Liveness Detection và JWT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc đánh giá KPI/OKR theo thời gian thực tích hợp Redis cache và PostgreSQL. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý hồ sơ nhân sự điện tử (e-Profile) sử dụng Elasticsearch cho tìm kiếm. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ tính lương tự động theo ca phức tạp kết hợp OCR và rule engine. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế dự đoán tỷ lệ nghỉ việc bằng Machine Learning áp dụng RBAC và ABAC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý tài sản nhân viên triển khai trên Kubernetes với zero-downtime. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập hạ tầng phân quyền theo phòng ban và vai trò kết hợp FCM và WebSocket. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống khảo sát gắn kết nhân viên sử dụng BullMQ cho background jobs. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp đào tạo nội bộ và LMS áp dụng QR code động. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển engine theo dõi hiệu suất qua dashboard tích hợp Google Calendar. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc tạo hợp đồng lao động điện tử kết hợp biometric authentication. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ ghi nhật ký thao tác HR (audit log) sử dụng Immutable Logs. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế quản lý phúc lợi và bảo hiểm áp dụng AI dự đoán rủi ro. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun tuyển dụng và onboarding số hóa sử dụng eKYC. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tối ưu lịch trực áp dụng geofencing cho chấm công ngoài văn phòng. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống quản lý kho hàng đa vị trí (WMS) kết hợp Apache Kafka. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp dự báo nhu cầu tồn kho bằng AI sử dụng Prophet/ARIMA. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ theo dõi chuỗi cung ứng end-to-end tích hợp API GHN/GHTK. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc quản lý mua hàng và nhà cung cấp (PO) áp dụng blockchain. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ tối ưu tuyến đường giao nhận sử dụng MQTT và IoT sensors. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế quản lý kho lạnh kết hợp Time-series DB. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun lập kế hoạch sản xuất (MES) sử dụng FFmpeg cho video inspection. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ theo dõi hiệu suất nhà cung cấp (Vendor Scorecard) kết hợp WebSocket. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý chi phí logistics áp dụng rule engine. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp đồng bộ tồn kho đa kênh sử dụng Redis Pub/Sub. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ tính toán điểm đặt hàng lại (Reorder Point) kết hợp Machine Learning. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc tối ưu hóa packing và shipping áp dụng Computer Vision. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ quản lý hợp đồng nhà cung cấp sử dụng Elasticsearch. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế cá nhân hóa trải nghiệm khách hàng dựa trên hành vi kết hợp CDP. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun phân đoạn khách hàng động (Dynamic Segmentation) sử dụng RAG với Qdrant. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ theo dõi hành trình khách hàng (Customer Journey) tích hợp OpenAI/LLM. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống dự báo churn và retention campaign áp dụng XGBoost. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp chương trình khách hàng thân thiết (Loyalty) sử dụng A/B Testing. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ chăm sóc khách hàng đa kênh (Omnichannel) kết hợp Redis và Elasticsearch. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc tích hợp chatbot AI hỗ trợ 24/7 sử dụng WebSocket và Socket.io. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ phân tích cảm xúc khách hàng (Sentiment Analysis) áp dụng NLP và PhoBERT. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế theo dõi NPS và CSAT theo thời gian thực kết hợp Firebase Cloud Messaging. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý phễu bán hàng (Sales Funnel) sử dụng Collaborative Filtering. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ tự động gửi email/SMS follow-up áp dụng Feature Flag. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý kiến thức hỗ trợ (Knowledge Base) tích hợp RAG. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp đánh giá tương tác nhân viên CS sử dụng Session Replay. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý chiến dịch marketing automation kết hợp CDP. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc tự động phân phối ticket hỗ trợ áp dụng identity resolution. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phát hiện gian lận giao dịch (Fraud Detection) sử dụng Random Forest/XGBoost. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế đối soát giao dịch ngân hàng kết hợp OCR cho chứng từ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý dòng tiền (Cash Flow) áp dụng Event Sourcing. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ chấm điểm tín dụng (Credit Scoring) sử dụng ClickHouse. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống báo cáo tài chính theo chuẩn IFRS kết hợp AES-256 và KMS. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp phát hành hóa đơn điện tử (e-Invoice) sử dụng Two-Phase Commit. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ quản lý ví điện tử nội bộ tích hợp API ngân hàng và SWIFT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc theo dõi công nợ phải thu/phải trả triển khai trên Zero-Trust. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ tự động hóa quy trình phê duyệt chi sử dụng Redis distributed lock. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế tuân thủ PCI-DSS và mã hóa dữ liệu thẻ áp dụng rule engine. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quản lý hợp đồng tài chính điện tử kết hợp Timestamp Authority. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ phân tích rủi ro tài chính sử dụng Immutable Logs (WORM). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống omnichannel inventory sync sử dụng Kafka cho order events. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp giỏ hàng và thanh toán phức hợp áp dụng Vector DB recommendation. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ dynamic pricing theo nhu cầu tích hợp WebRTC và HLS. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc theo dõi cart abandonment sử dụng Collaborative Filtering. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý campaign khuyến mãi kết hợp API vận chuyển GHN/GHTK. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế tìm kiếm thông minh và autocomplete áp dụng Elasticsearch fuzzy search. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun quản lý tồn kho flash sale sử dụng Feature Flag và A/B Testing. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tích hợp TikTok Shop và Facebook Shop kết hợp Geofencing. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống cá nhân hóa gợi ý sản phẩm áp dụng GraphQL. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp sàn thương mại B2B và marketplace sử dụng Rate Limiting. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ live streaming bán hàng kết hợp CDN Cloudflare. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý seller và commission sử dụng Optimistic Locking. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ xử lý đổi trả hàng tự động tích hợp API vận chuyển. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế quản lý đánh giá và phản hồi sản phẩm áp dụng Serverless Lambda. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun điểm bán hàng (POS) offline/online sử dụng WebRTC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý affiliate và referral kết hợp Session Replay. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống quản lý phòng họp và đặt lịch sử dụng Workflow Engine. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp quản lý công việc và task assignment tích hợp Calendar API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ tự động hóa luồng phê duyệt (Workflow) áp dụng Feature Flag. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý dự án và Kanban board sử dụng Operational Transformation. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ lưu trữ tài liệu điện tử (EDMS) kết hợp OCR và NLP. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý thay đổi và change request tích hợp Calendar API. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun theo dõi tiến độ dự án real-time sử dụng Camunda/Temporal. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ quản lý tài liệu phiên bản (Version Control) áp dụng S3 Presigned URL. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống tự động hóa onboarding nhân sự nội bộ sử dụng Prometheus/Grafana. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp hợp đồng điện tử và chữ ký số kết hợp HSM/OTP. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ theo dõi chi phí vận hành áp dụng PDF Generator. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc quản lý kiến thức nội bộ (Knowledge Base) sử dụng RBAC và audit log. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phê duyệt chi tiêu và ngân sách kết hợp React DnD. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế tự động hóa báo cáo định kỳ sử dụng Elasticsearch. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý tài sản văn phòng áp dụng Event-Driven với Kafka. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ theo dõi hiệu suất quy trình (Process Mining) triển khai trên microservices. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý rác thải thông minh sử dụng Protocol Buffers và gRPC. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp giám sát đội xe (Fleet Management) tích hợp Google Maps API. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ theo dõi vị trí GPS thời gian thực sử dụng Kafka Streams. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý kho lạnh di động kết hợp Redis Geo. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý năng lượng tự động triển khai trên Kubernetes edge. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế theo dõi hành trình xe công cộng áp dụng OTA firmware update. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun hệ thống cảnh báo cháy thông minh sử dụng MQTT. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ cảnh báo vượt ngưỡng môi trường áp dụng AI anomaly detection. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống nông nghiệp thông minh (Smart Agriculture) kết hợp Time-series DB. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp tối ưu lịch bảo trì thiết bị IoT sử dụng Device Shadow. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ giám sát chất lượng không khí tích hợp LoRaWAN và NB-IoT. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc thu thập dữ liệu cảm biến IoT áp dụng Edge Computing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý container và logistics cảng sử dụng Computer Vision. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế bãi đỗ xe thông minh (Smart Parking) kết hợp Grafana. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun theo dõi tiêu hao nhiên liệu tích hợp OpenStreetMap. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ tích hợp Telegram Bot cảnh báo sử dụng InfluxDB. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý phòng thí nghiệm và thiết bị áp dụng Vector DB Qdrant. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp theo dõi sức khỏe học đường sử dụng Time-series cho vital signs. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ đặt lịch khám và xếp hàng thông minh kết hợp Biometric. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý hồ sơ bệnh án điện tử áp dụng HL7 FHIR. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ thi trực tuyến và giám sát AI sử dụng Blockchain cho chứng chỉ. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế tích hợp bảo hiểm y tế điện tử kết hợp Differential Privacy. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun quản lý trường học thông minh áp dụng WebRTC cho telehealth. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý tiêm chủng và vaccine sử dụng Computer Vision. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống hỗ trợ trợ lý AI giảng dạy (RAG) kết hợp Apriori/FP-Growth. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp theo dõi tiến độ học tập sinh viên sử dụng Vector DB. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ quản lý chứng chỉ điện tử áp dụng eKYC và chữ ký số. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý nhà thuốc và kê đơn kết hợp Elasticsearch. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ quản lý bệnh viện (HIS/EMR) triển khai trên private cloud. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế hệ thống LMS và video HLS tích hợp HLS streaming và DRM. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun phân tích dữ liệu y khoa (Data Mining) sử dụng OCR. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ khám bệnh từ xa (Telehealth) áp dụng Biometric authentication. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống tích hợp thiết bị y tế IoT kết hợp Time-series. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp phân tích log tập trung (ELK Stack) sử dụng OPA cho ABAC. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý API Gateway và Rate Limiting triển khai WAF. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc Zero Trust Access Control kết hợp OpenTelemetry và Jaeger. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ phát hiện gian lận bằng ML sử dụng Prometheus và Grafana. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế trợ lý AI tri thức (RAG) áp dụng AES-256, TLS 1.3, mTLS. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun chống rò rỉ dữ liệu (DLP) sử dụng eBPF và Falco. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ quản lý định danh và SSO (IAM) kết hợp SIEM. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống ẩn danh hóa dữ liệu áp dụng Differential Privacy và k-Anonymity. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp theo dõi distributed tracing sử dụng Kafka + Schema Registry. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ phân tích dữ liệu lớn (Big Data Pipeline) tích hợp SonarQube. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc tự động hóa compliance reporting kết hợp Qdrant/Weaviate + LLM. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ quản lý quyền truy cập ABAC/RBAC sử dụng ClickHouse/Flink. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế quản lý schema và data lineage áp dụng HashiCorp Vault. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun quét lỗ hổng tự động (Vulnerability Scanner) kết hợp Vector Search. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ bảo vệ chống DDoS và WAF sử dụng BM25 hybrid. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống giám sát an ninh mạng (SIEM) triển khai WAF Cloudflare. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp mã hóa dữ liệu at-rest và in-transit sử dụng KMS. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ quản lý vận hành tòa nhà/chung cư tích hợp chữ ký số. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc quản lý phí dịch vụ và công nợ cư dân áp dụng Geofencing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ tích hợp bản đồ và 3D tour kết hợp IoT sensors và MQTT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế quản lý hợp đồng mua bán điện tử sử dụng OCR cho giấy tờ pháp lý. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun quản lý quỹ bảo trì chung cư áp dụng Document Management. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ quản lý hợp đồng thuê kết hợp Elasticsearch. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý vận hành tòa nhà triển khai mobile app với biometric. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp hệ thống đặt tiện ích online sử dụng GIS và Google Maps. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ quản lý nhà môi giới và hoa hồng áp dụng 3D visualization. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý bãi đỗ xe và thẻ ra vào kết hợp QR/RFID. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ tích hợp IoT cho smart building sử dụng Predictive Analytics. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế đặt lịch bảo trì và sửa chữa áp dụng Geofencing. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun quản lý tiện ích và dịch vụ cư dân kết hợp Payment Gateway. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý sổ đỏ và pháp lý dự án sử dụng Blockchain. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống phân phối dự án bất động sản (PropTech) áp dụng Three.js/WebGL. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp phân tích giá thị trường bất động sản sử dụng Time-series DB. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ hệ thống khiếu nại cư dân kết hợp Document Management. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc cổng thông tin công khai dữ liệu mở áp dụng Data Anonymization. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ quản lý hộ tịch và hộ khẩu điện tử sử dụng OCR và NLP. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế tích hợp bản đồ địa chính kết hợp eKYC và Liveness Detection. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun cổng dịch vụ công một cửa điện tử áp dụng Digital Signature. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ tích hợp định danh quốc gia (VNeID) sử dụng OpenID Connect. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý giấy tờ tùy thân điện tử triển khai trên hạ tầng chính phủ. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp hệ thống công khai minh bạch ngân sách kết hợp Notification đa kênh. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ quản lý đăng ký kinh doanh online áp dụng Open Data standards. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc quản lý thủ tục hành chính điện tử sử dụng Workflow Engine. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ quản lý tài sản công tích hợp API định danh quốc gia. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế tích hợp chữ ký số công chức áp dụng Accessibility standards (WCAG). Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun theo dõi tiến độ hồ sơ công dân sử dụng Immutable Audit Logs. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ hệ thống bỏ phiếu điện tử nội bộ kết hợp Multi-Factor Authentication. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống số hóa văn bản hành chính công áp dụng SAML cho SSO. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp tiếp nhận và xử lý phản ánh công dân sử dụng GIS. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ đối soát ngân sách và chi tiêu công kết hợp eKYC. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc quản lý hồ sơ cán bộ công chức áp dụng OCR và NLP. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ tự động hóa quy trình phê duyệt hành chính triển khai trên hạ tầng bảo mật cao. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế quản lý review và ranking trên OTA kết hợp CRM và guest profiling. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun tích hợp thanh toán đa tiền tệ áp dụng Geofencing cho local offers. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tích hợp check-in/check-out di động sử dụng IoT cho room automation. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống dynamic pricing phòng và dịch vụ kết hợp Channel Manager API. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp quản lý nhà hàng và F&B áp dụng Recommendation Engine. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ theo dõi chi phí vận hành khách sạn sử dụng Sentiment Analysis. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc đặt phòng trực tuyến (Booking Engine) kết hợp Multi-currency. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ quản lý lịch trình tour real-time áp dụng WebSocket. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế quản lý group booking và event triển khai mobile check-in với QR/NFC. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun theo dõi occupancy và revenue management sử dụng Dynamic Pricing ML. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ hệ thống loyalty cho khách hàng thân thiết kết hợp OCR passport. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống quản lý spa và tiện ích áp dụng Revenue Management algorithms. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp quản lý tour và vận chuyển du lịch sử dụng Geofencing. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ hệ thống đặt bàn và order F&B kết hợp PMS với POS. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc quản lý trải nghiệm khách hàng tại chỗ tích hợp Payment Gateway quốc tế. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ theo dõi carbon footprint và sustainability áp dụng Multi-currency. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế tích hợp bản đồ và hướng dẫn du lịch sử dụng Recommendation Engine. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun quản lý khách sạn (PMS) kết hợp Channel Manager API. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ quản lý review và ranking trên OTA áp dụng Collaborative Filtering. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống tích hợp thanh toán đa tiền tệ triển khai mobile check-in. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp quản lý nhà hàng và F&B sử dụng IoT cho room automation. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ theo dõi occupancy real-time kết hợp WebSocket. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc quản lý lịch trình tour áp dụng Sentiment Analysis cho reviews. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ hệ thống loyalty kết hợp Dynamic Pricing. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế quản lý spa và tiện ích sử dụng CRM và guest profiling. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun quản lý tour và vận chuyển du lịch áp dụng Geofencing. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ đặt bàn và order F&B kết hợp Recommendation Engine. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống quản lý trải nghiệm khách hàng tại chỗ sử dụng PMS với Accounting. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp theo dõi carbon footprint áp dụng Multi-currency và real-time FX. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ tích hợp bản đồ du lịch kết hợp OCR passport scanning. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc quản lý group booking sử dụng Revenue Management. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ dynamic pricing phòng kết hợp Channel Manager. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế check-in di động áp dụng QR/NFC và IoT. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun quản lý review OTA sử dụng NLP và PhoBERT. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ thanh toán đa tiền tệ kết hợp Geofencing. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống quản lý F&B áp dụng Collaborative Filtering. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp theo dõi chi phí khách sạn sử dụng Time-series DB. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ Booking Engine kết hợp Multi-currency. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc lịch trình tour real-time sử dụng Kafka Streams. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ occupancy management áp dụng ML models. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế loyalty program kết hợp OCR và Recommendation. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun spa management sử dụng WebSocket. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ tour management áp dụng Geofencing và GPS. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống order F&B real-time kết hợp POS integration. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp guest experience management sử dụng CRM. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ sustainability tracking kết hợp Multi-currency. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc map integration cho du lịch áp dụng OpenStreetMap. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ PMS core sử dụng Channel Manager API. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế review ranking kết hợp Sentiment Analysis. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun multi-currency payment áp dụng real-time FX. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ mobile check-in với biometric. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống F&B management kết hợp IoT sensors. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp real-time occupancy sử dụng WebSocket và Redis. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ tour scheduling áp dụng Dynamic Pricing. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc loyalty engine kết hợp Recommendation và A/B Testing. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ spa booking sử dụng Calendar API. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế transport management cho tour áp dụng GPS tracking. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun table reservation real-time kết hợp POS. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ guest profiling sử dụng CDP và identity resolution. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống carbon tracking kết hợp Multi-currency reporting. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp interactive map cho khách sạn sử dụng Three.js. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ full PMS suite tích hợp Accounting và POS. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc OTA review management áp dụng NLP. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ multi-currency gateway kết hợp Geofencing offers. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp cơ chế biometric check-in cho khách sạn. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển mô-đun smart F&B ordering sử dụng IoT. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết lập phân hệ occupancy analytics áp dụng ML. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng hệ thống tour real-time tracking kết hợp Kafka. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp giải pháp loyalty points engine sử dụng Redis. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển dịch vụ spa inventory management. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết kế kiến trúc transport routing cho tour áp dụng optimization algorithms. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng công cụ F&B POS integration real-time. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp cơ chế advanced guest CRM với profiling. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển mô-đun sustainability dashboard multi-currency. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết lập phân hệ AR map guide cho khách sạn. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng hệ thống complete hotel PMS với full integration. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp giải pháp AI-powered review ranking. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển dịch vụ global payment multi-currency. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết kế kiến trúc contactless check-in full biometric. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng công cụ IoT-enabled F&B kitchen. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp cơ chế predictive occupancy ML. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển mô-đun live tour tracking GPS. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết lập phân hệ gamified loyalty system. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng hệ thống intelligent spa scheduling. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Tích hợp giải pháp optimized tour logistics. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Phát triển dịch vụ seamless F&B ordering app. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Thiết kế kiến trúc 360 guest experience platform. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Xây dựng công cụ green hotel metrics multi-currency. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Tích hợp cơ chế immersive hotel map 3D. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Phát triển mô-đun enterprise PMS suite. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Thiết lập phân hệ smart OTA ranking engine. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Xây dựng hệ thống universal multi-currency payments. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Tích hợp giải pháp next-gen biometric check-in. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Phát triển dịch vụ connected F&B ecosystem. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Thiết kế kiến trúc AI occupancy forecasting. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Xây dựng công cụ real-time tour operations. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Tích hợp cơ chế advanced loyalty personalization. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Phát triển mô-đun digital spa experience. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Thiết lập phân hệ intelligent transport for tourism. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
+Xây dựng hệ thống unified F&B and POS. Hệ thống tự động xử lý ngoại lệ, gửi cảnh báo khi có sự cố và cung cấp dashboard trực quan.
+Tích hợp giải pháp holistic guest journey platform. Mô-đun hỗ trợ xử lý real-time, ghi log đầy đủ và tích hợp dễ dàng với các hệ thống hiện có.
+Phát triển dịch vụ ESG tracking for hotels. Hệ thống cần đảm bảo hiệu năng cao, bảo mật và khả năng mở rộng.
+Thiết kế kiến trúc interactive property visualization. Giải pháp phải tuân thủ các tiêu chuẩn bảo mật hiện hành và hỗ trợ giám sát liên tục.
+Xây dựng công cụ full-stack hotel management system. Yêu cầu thiết kế theo kiến trúc microservices, hỗ trợ CI/CD và zero-downtime deployment.
