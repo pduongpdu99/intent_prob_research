@@ -9,53 +9,97 @@ except LookupError:
     # Download it only if it is missing
     nltk.download('punkt_tab')
 
-def extract_tokens(document: str, pass_stop_word=False, ngram=4) -> List[str]:
+def extract_tokens(
+    document: str,
+    pass_stop_word=False,
+    ngram=4
+) -> List[str]:
     results = []
+
     for sent in document.split("."):
         sent = sent.strip()
 
         sw = get_vietnamese_stopwords()
         nsw = cast(dict, get_non_sw(kv_structure=True))
+
         tokens = nltk.word_tokenize(sent.lower())
         _size = len(tokens)
+
         if not pass_stop_word:
             results.append(tokens)
-        
+
         result = []
         index = 0
+
         while index < _size:
             val = tokens[index]
+
+            # Skip punctuation
             if val in ",.!@,?><[];':\\":
                 index += 1
                 continue
 
-            temps = []
-            current_phrase = ""
-            
-            for i in range(ngram):
-                next_idx = index + i
-                if next_idx >= _size: break
-                current_phrase += tokens[next_idx] if i == 0 else " " + tokens[next_idx]
-                temps.append((current_phrase, i + 1))
-            temps.reverse()
-
-            matched = False
+            # --------------------------------------------------
+            # 1. Nếu token có trong non-stopword dictionary
+            #    -> thử tìm n-gram
+            # --------------------------------------------------
             if val in nsw:
-                lst_nsw_index = nsw[val]
+                temps = []
+                current_phrase = ""
+
+                for i in range(ngram):
+                    next_idx = index + i
+
+                    if next_idx >= _size:
+                        break
+
+                    current_phrase += (
+                        tokens[next_idx]
+                        if i == 0
+                        else " " + tokens[next_idx]
+                    )
+
+                    temps.append((current_phrase, i + 1))
+
+                # Ưu tiên n-gram dài nhất
+                temps.reverse()
+
+                matched = False
+
                 for phrase, jump in temps:
-                    if phrase in lst_nsw_index:
+                    if phrase in nsw[val]:
                         result.append(phrase)
                         index += jump
                         matched = True
-                        break 
-                
-                if not matched and val not in sw:
+                        break
+
+                if matched:
+                    continue
+
+                # --------------------------------------------------
+                # Không match được n-gram
+                #
+                # -> kiểm tra token đơn có phải stopword không
+                # -> nếu không phải thì giữ lại
+                # -> luôn index += 1
+                # --------------------------------------------------
+                if val not in sw:
                     result.append(val)
+
+                index += 1
+
+            # --------------------------------------------------
+            # 2. Token không có trong nsw
+            #    -> chỉ cần kiểm tra stopword
+            # --------------------------------------------------
             else:
                 if val not in sw:
                     result.append(val)
-            index += 1
+
+                index += 1
+
         results.append(result)
+
     return results
 
 
