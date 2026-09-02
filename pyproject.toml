@@ -12,7 +12,8 @@ dependencies = [
     "huggingface_hub",
     "torch",
     "python-dotenv",
-    "numba"
+    "numba",
+    "openpyxl"
 ]
 license = "MIT"
 authors = [
