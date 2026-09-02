@@ -1,7 +1,8 @@
 import json
 from engine.extraction.extract_inforamtion import build_relations, detect_entities, detect_triggers, extract_tokens
-from engine.Util import flat2
+from engine.Util import flat2, REQUIRED_TEMPLATE_PATH, ENTITIES_PATH, TRIGGERS_PATH, RELATION_PATH, KNOWLEDGE_BASE_PATH, KNOWLEDGE_BASE_JSON_PATH
 from typing import List
+import re
 
 __all__ =[
     "ext_from_prompt",
@@ -63,3 +64,34 @@ class ExtractionEngine:
     def to_relation(self, path: str):
         with open(path, "w") as file:
             file.write(json.dumps(self.relation, ensure_ascii=False, indent=4))
+
+    def export_from_template(self):
+        docs = []
+        with open(REQUIRED_TEMPLATE_PATH) as file:
+            docs = file.readlines()
+
+        for doc in docs:
+            self.learn(doc)
+
+        self.to_entities(ENTITIES_PATH)
+        self.to_triggers(TRIGGERS_PATH)
+        self.to_relation(RELATION_PATH)
+
+    def export_knowledge_base_json(self):
+        results = {}
+        with open(KNOWLEDGE_BASE_PATH) as file:
+            for line in file.readlines():
+                _line = re.split(r"(\d+).$", line)[-1].strip()
+                _str = re.split(r"(\[[^\]]*\])", _line)
+                if len(_str) == 1: continue
+                software_type = _str[1][1:-1]
+                required_description = _str[2].strip()
+
+                if software_type not in results:
+                    results[software_type] = []
+
+                if required_description not in results[software_type]:
+                    results[software_type].append(required_description)
+
+        with open(KNOWLEDGE_BASE_JSON_PATH, "w") as file:
+            file.write(json.dumps(results, indent=2,ensure_ascii=False).encode("utf-8").decode())
