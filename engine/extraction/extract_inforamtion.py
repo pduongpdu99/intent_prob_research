@@ -1,6 +1,7 @@
 import nltk
 from engine.Util import get_vietnamese_stopwords, get_non_sw
 from typing import cast, List
+from engine.Util import flat2
 
 try:
     # Try to look up the resource to see if it exists
@@ -12,7 +13,8 @@ except LookupError:
 def extract_tokens(
     document: str,
     pass_stop_word=False,
-    ngram=4
+    ngram=4,
+    dim=1
 ) -> List[str]:
     results = []
 
@@ -100,7 +102,7 @@ def extract_tokens(
 
         results.append(result)
 
-    return results
+    return flat2(results) if dim == 1 else results
 
 
 def detect_entities(tokens):
