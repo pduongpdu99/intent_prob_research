@@ -1,6 +1,14 @@
 import json
 from engine.extraction.extract_inforamtion import build_relations, detect_entities, detect_triggers, extract_tokens
-from engine.Util import flat2, REQUIRED_TEMPLATE_PATH, ENTITIES_PATH, TRIGGERS_PATH, RELATION_PATH, KNOWLEDGE_BASE_PATH, KNOWLEDGE_BASE_JSON_PATH
+from engine.Util import (
+    flat2, 
+    REQUIRED_TEMPLATE_PATH, 
+    ENTITIES_PATH, 
+    TRIGGERS_PATH, 
+    RELATION_PATH, 
+    KNOWLEDGE_BASE_TXT_PATH, 
+    KNOWLEDGE_BASE_JSON_PATH
+)
 from typing import List
 import re
 
@@ -79,7 +87,7 @@ class ExtractionEngine:
 
     def export_knowledge_base_json(self):
         results = {}
-        with open(KNOWLEDGE_BASE_PATH) as file:
+        with open(KNOWLEDGE_BASE_TXT_PATH) as file:
             for line in file.readlines():
                 _line = re.split(r"(\d+).$", line)[-1].strip()
                 _str = re.split(r"(\[[^\]]*\])", _line)
