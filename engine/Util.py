@@ -43,6 +43,15 @@ def get_non_sw(kv_structure=False):
 
     return result
 
+def read_json(path: str):
+    import json
+    try :
+        with open(path, "r", encoding="utf-8") as file:
+            return json.loads(file.read())
+    except FileNotFoundError as e:
+        print(e)
+        return None
+
 def flat2(arr_2d):
     return [col for row in arr_2d for col in row]
 
