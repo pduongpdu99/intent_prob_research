@@ -47,8 +47,8 @@ class Kernel:
         elif u == "KB":
             return "{0} KB".format(allocated_memory/1024)
         elif u == "MB":
-                    return "{0} MB".format(allocated_memory/1024/1024)
+            return "{0} MB".format(allocated_memory/1024/1024)
         elif u == "GB":
-                    return "{0} GB".format(allocated_memory/1024/1024/1024)
+            return "{0} GB".format(allocated_memory/1024/1024/1024)
         elif u == "TB":
-                    return "{0} TB".format(allocated_memory/1024/1024/1024/1024)
+            return "{0} TB".format(allocated_memory/1024/1024/1024/1024)
