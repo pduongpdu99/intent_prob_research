@@ -23,10 +23,6 @@ def get_vietnamese_stopwords():
 
     return stop_words
 
-def get_domain():
-    with open(os.path.join(root_directory_path, "data", "domain.txt"), "r") as f:
-        return [i.strip() for i in f.readlines() if i.strip() != ""]
-
 def get_non_sw(kv_structure=False):
     result = []
     with open(os.path.join(root_directory_path, "data", "non_stop_words.txt"), "r") as f:
