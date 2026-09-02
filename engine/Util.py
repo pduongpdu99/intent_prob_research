@@ -43,7 +43,7 @@ def get_non_sw(kv_structure=False):
 
     return result
 
-def read_json(path: str):
+def read_json(path: str) -> dict | None:
     import json
     try :
         with open(path, "r", encoding="utf-8") as file:
@@ -57,18 +57,15 @@ def flat2(arr_2d):
 
 # PATH
 KNOWLEDGE_DIRECTORY = join("knowledge_directory")
-KNOWLEDGE_BASE_TXT_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.txt")
-KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.json")
 
+KNOWLEDGE_BASE_TXT_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.txt")
 REQUIRED_TEMPLATE_PATH = join(KNOWLEDGE_DIRECTORY, "required_template.txt")
 
 DATA_COLLECTION_XLSX_PATH = join(KNOWLEDGE_DIRECTORY, "data_collection.xlsx")
 
+KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.json")
 ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, "entities.json")
 TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, "triggers.json")
 RELATION_PATH = join(KNOWLEDGE_DIRECTORY, "relation.json")
-
-# JSON
-# ENTITIES_DATA = json.loads(ENTITIES_PATH)
-# TRIGGERS_DATA = json.loads(TRIGGERS_PATH)
-# RELATION_DATA = json.loads(RELATION_PATH)
+SOFTWARE_ROLE_PATH = join(KNOWLEDGE_DIRECTORY, "domain", "software-data.json")
+SOFTWARE_DOMAIN_PATH = join(KNOWLEDGE_DIRECTORY, "domain", "software-domain.json")
