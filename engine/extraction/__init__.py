@@ -13,30 +13,37 @@ from typing import List
 import re
 
 __all__ =[
-    "ext_from_prompt",
+    # "ext_from_prompt",
+    "ExtractionEngine",
 ]
 
-def ext_from_prompt(input_prompt: str):
-    tokens = extract_tokens(
-        document=input_prompt,
-        pass_stop_word=True,
-        ngram=4
-    )
+# def ext_from_prompt(input_prompt: str):
+#     tokens = extract_tokens(
+#         document=input_prompt,
+#         pass_stop_word=True,
+#         ngram=4
+#     )
 
-    # flatten a 2D array into a 1D array
-    tokens = flat2(tokens)
+#     # flatten a 2D array into a 1D array
+#     tokens = flat2(tokens)
     
-    entities = detect_entities(tokens)
-    triggers = detect_triggers(tokens)
+#     entities = detect_entities(tokens)
+#     triggers = detect_triggers(tokens)
 
-    relation_rules = build_relations(entities=entities, triggers=triggers)
-    return relation_rules
+#     relation_rules = build_relations(entities=entities, triggers=triggers)
+#     return entities, triggers, relation_rules
 
 class ExtractionEngine:
     entities: List[tuple[str, str]]
     triggers: List[tuple[str, str]]
     relation: List[dict]
     tokens: List[str]
+
+    # extended func
+    extract_tokens = staticmethod(extract_tokens)
+    detect_entities = staticmethod(detect_entities)
+    detect_triggers = staticmethod(detect_triggers)
+    build_relations = staticmethod(build_relations)
 
     def __init__(self) -> None:
         """The purpose of this component is to identify entities and relations from user prompts.
@@ -53,9 +60,9 @@ class ExtractionEngine:
         __token = flat2(extract_tokens(another_template, pass_stop_word=True))
         self.tokens = list(set(self.tokens + __token))
 
-        __entities = detect_entities(self.tokens)
-        __triggers = detect_triggers(self.tokens)
-        __relation = build_relations(__entities, __triggers)
+        __entities = self.detect_entities(self.tokens)
+        __triggers = self.detect_triggers(self.tokens)
+        __relation = self.build_relations(__entities, __triggers)
 
         self.entities = __entities
         self.triggers = __triggers
