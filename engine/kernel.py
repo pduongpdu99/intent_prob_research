@@ -8,6 +8,7 @@ from .Util import (
 import json
 import pandas as pd
 from typing import List
+from engine.extraction import ExtractionEngine
 
 class Kernel:
     entities_data: List[dict] = []
@@ -16,6 +17,9 @@ class Kernel:
     raci_matrix = pd.read_excel(DATA_COLLECTION_XLSX_PATH, sheet_name="raci")
     raci_matrix_domain = []
     raci_matrix_role = ["BUSINESS_ANALYST","UI_UX_DESIGNER","FRONTEND_DEV","BACKEND_DEV","MOBILE_DEV","QA_QC","DEVOPS",]
+
+    # tools
+    extraction_tool = ExtractionEngine()
 
     def __init__(self):
         with open(ENTITIES_PATH, "r", encoding="utf-8") as file:
@@ -32,3 +36,9 @@ class Kernel:
         keyname = "Unnamed: 0"
         self.raci_matrix.set_index(self.raci_matrix[keyname],inplace=True)
         self.raci_matrix = self.raci_matrix[["BUSINESS_ANALYST","UI_UX_DESIGNER","FRONTEND_DEV","BACKEND_DEV","MOBILE_DEV","QA_QC","DEVOPS",]]
+    
+    def create_relation(self):
+        self.extraction_tool.export_from_template()
+
+    def create_base(self):
+        self.extraction_tool.export_knowledge_base_json()
