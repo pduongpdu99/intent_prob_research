@@ -53,6 +53,11 @@ khắt khe
 phối hợp
 thành viên
 nền tảng
+hợp đồng
+chính sách
+chính trị
+nghỉ phép
+hợp đồng lao động
 chuẩn hóa
 bảo mật
 xử lý
@@ -69,5 +74,37 @@ công cụ
 cài đặt
 tiến độ
 diễn ra
+hồ sơ
+tài khoản
+kê đơn
+cá nhân
+chuyên khoa
+bệnh án
+bệnh nhân
+lịch sử
+lịch khám
+lịch hẹn
+lịch làm việc
+đơn thuốc
+đặt lịch
+lựa chọn
+thiết bị
+tùy chọn
+di động
+đồng thời
+thông báo
+thống kê
+bổ sung
+nhân viên
+hiệu suất
+trực tiếp
+trực thuộc
+tùy theo
+công việc
+thiết lập
+chức vụ
+phù hợp
+hệ thống thông báo
 điện toán đám mây
 khách hàng tiềm năng
+thiết bị di động
