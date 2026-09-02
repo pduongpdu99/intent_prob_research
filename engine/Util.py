@@ -45,3 +45,15 @@ def get_non_sw(kv_structure=False):
 
 def flat2(arr_2d):
     return [col for row in arr_2d for col in row]
+
+# PATH
+KNOWLEDGE_DIRECTORY = join("knowledge_directory")
+DATA_COLLECTION_XLSX_PATH = join(KNOWLEDGE_DIRECTORY, "data_collection.xlsx")
+ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, "entities.json")
+TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, "triggers.json")
+RELATION_PATH = join(KNOWLEDGE_DIRECTORY, "relation.json")
+
+# JSON
+# ENTITIES_DATA = json.loads(ENTITIES_PATH)
+# TRIGGERS_DATA = json.loads(TRIGGERS_PATH)
+# RELATION_DATA = json.loads(RELATION_PATH)
