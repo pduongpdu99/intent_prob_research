@@ -48,7 +48,13 @@ def flat2(arr_2d):
 
 # PATH
 KNOWLEDGE_DIRECTORY = join("knowledge_directory")
+KNOWLEDGE_BASE_TXT_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.txt")
+KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.json")
+
+REQUIRED_TEMPLATE_PATH = join(KNOWLEDGE_DIRECTORY, "required_template.txt")
+
 DATA_COLLECTION_XLSX_PATH = join(KNOWLEDGE_DIRECTORY, "data_collection.xlsx")
+
 ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, "entities.json")
 TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, "triggers.json")
 RELATION_PATH = join(KNOWLEDGE_DIRECTORY, "relation.json")
