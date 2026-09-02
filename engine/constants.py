@@ -256,6 +256,8 @@ ENTITY_MAP = {
     "traefik": "SYS",
     "pgbouncer": "SYS",
     "proxysql": "SYS",
+    "thiết bị di động": "SYS",
+    "hệ thống thông báo": "SYS",
 
     # FEATURE (Business features / Outputs)
     "nhân sự": "FEATURE",
@@ -1026,11 +1028,11 @@ TRIGGER_VERBS = {
     "upgrade": "UPGRADES",
 
     # Secure / Protect
-    "bảo mật": "SECURES",
-    "bảo vệ": "SECURES",
-    "mã hóa": "SECURES",
-    "phân quyền": "SECURES",
-    "kiểm soát truy cập": "SECURES",
+    "bảo mật": "SECURITY",
+    "bảo vệ": "SECURITY",
+    "mã hóa": "SECURITY",
+    "phân quyền": "SECURITY",
+    "kiểm soát truy cập": "SECURITY",
 
     # Train / Learn
     "đào tạo": "TRAINS",
@@ -1146,8 +1148,8 @@ TRIGGER_VERBS = {
     "cập nhật phiên bản": "UPGRADES",
 
     # ====================== SECURE / PROTECT ======================
-    "bảo mật": "SECURES",
-    "bảo vệ": "SECURES",
+    "bảo mật": "SECURITY",
+    "bảo vệ": "SECURITY",
     "mã hóa": "ENCRYPTS",
     "phân quyền": "AUTHORIZES",
     "kiểm soát truy cập": "AUTHORIZES",
@@ -1723,7 +1725,7 @@ RELATION_RULES = {
         "default": "PROTECTS",
         "triggers": {
             "bảo vệ": "PROTECTS",
-            "bảo mật cho": "SECURES",
+            "bảo mật cho": "SECURITY",
             "áp dụng cho": "APPLIED_TO",
         }
     },
@@ -1731,7 +1733,7 @@ RELATION_RULES = {
         "default": "PROTECTS",
         "triggers": {
             "bảo vệ": "PROTECTS",
-            "bảo mật": "SECURES",
+            "bảo mật": "SECURITY",
             "kiểm soát": "CONTROLS",
         }
     },
