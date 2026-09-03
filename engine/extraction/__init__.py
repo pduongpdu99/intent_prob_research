@@ -55,18 +55,26 @@ class ExtractionEngine:
 
         # learning
 
-    def learn(self, another_template: str):
+    def learn(self, another_template: str, is_init=False):
         """In addition to the available data, further learning can take place after initialization"""
-        __token = flat2(extract_tokens(another_template, pass_stop_word=True))
+        __token = extract_tokens(another_template, pass_stop_word=True)
         self.tokens = list(set(self.tokens + __token))
 
         __entities = self.detect_entities(self.tokens)
         __triggers = self.detect_triggers(self.tokens)
         __relation = self.build_relations(__entities, __triggers)
 
-        self.entities = __entities
-        self.triggers = __triggers
-        self.relation = __relation
+        if not is_init:
+            self.entities += __entities
+            self.triggers += __triggers
+            self.relation += __relation
+        else:
+            self.entities = __entities
+            self.triggers = __triggers
+            self.relation = __relation
+
+        self.entities = list(set(self.entities))
+        self.triggers = list(set(self.triggers))
 
     def to_entities(self, path: str):
         with open(path, "w") as file:
