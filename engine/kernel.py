@@ -24,8 +24,8 @@ class Kernel:
 
     def __init__(self):
         self.entities_data = read_json(ENTITIES_PATH)
-        self.entities_data = read_json(TRIGGERS_PATH)
-        self.entities_data = read_json(RELATION_PATH)
+        self.triggers_data = read_json(TRIGGERS_PATH)
+        self.relation_data = read_json(RELATION_PATH)
         self.__raci_matrix_norm()
         self.raci_matrix_domain = self.raci_matrix.index
 
