@@ -43,7 +43,9 @@ def read_json(path: str) -> dict | None:
     import json
     try :
         with open(path, "r", encoding="utf-8") as file:
-            return json.loads(file.read())
+            _ = file.read().strip()
+            if len(_) == 0: _ = '{}'
+            return json.loads(_)
     except FileNotFoundError as e:
         print(e)
         return None
