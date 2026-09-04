@@ -1,37 +1,21 @@
 import json
 from engine.extraction.extract_inforamtion import build_relations, detect_entities, detect_triggers, extract_tokens
 from engine.Util import (
-    flat2, 
     REQUIRED_TEMPLATE_PATH, 
-    ENTITIES_PATH, 
-    TRIGGERS_PATH, 
-    RELATION_PATH, 
     KNOWLEDGE_BASE_TXT_PATH, 
-    KNOWLEDGE_BASE_JSON_PATH
+    KNOWLEDGE_BASE_JSON_PATH,
+    ENTITIES_PATH,
+    TRIGGERS_PATH,
+    RELATION_PATH
 )
 from typing import List
 import re
+from pathlib import Path
 
 __all__ =[
     # "ext_from_prompt",
     "ExtractionEngine",
 ]
-
-# def ext_from_prompt(input_prompt: str):
-#     tokens = extract_tokens(
-#         document=input_prompt,
-#         pass_stop_word=True,
-#         ngram=4
-#     )
-
-#     # flatten a 2D array into a 1D array
-#     tokens = flat2(tokens)
-    
-#     entities = detect_entities(tokens)
-#     triggers = detect_triggers(tokens)
-
-#     relation_rules = build_relations(entities=entities, triggers=triggers)
-#     return entities, triggers, relation_rules
 
 class ExtractionEngine:
     entities: List[tuple[str, str]]
@@ -77,28 +61,25 @@ class ExtractionEngine:
         # self.triggers = list(set(self.triggers))
 
     def to_entities(self, path: str):
+        _file = Path(path)
+        _file.parent.mkdir(parents=True, exist_ok=True)
+        _file.touch(exist_ok=True)
         with open(path, "w") as file:
-            file.write(json.dumps({k:v for k, v in self.entities}, ensure_ascii=False, indent=4))
+            file.write(json.dumps({k:v for k,v in self.entities}, ensure_ascii=False, indent=4))
 
     def to_triggers(self, path: str):
+        _file = Path(path)
+        _file.parent.mkdir(parents=True, exist_ok=True)
+        _file.touch(exist_ok=True)
         with open(path, "w") as file:
-            file.write(json.dumps({k:v for k, v in self.triggers}, ensure_ascii=False, indent=4))
+            file.write(json.dumps({k:v for k,v in self.triggers}, ensure_ascii=False, indent=4))
 
     def to_relation(self, path: str):
+        _file = Path(path)
+        _file.parent.mkdir(parents=True, exist_ok=True)
+        _file.touch(exist_ok=True)
         with open(path, "w") as file:
             file.write(json.dumps(self.relation, ensure_ascii=False, indent=4))
-
-    def export_from_template(self):
-        docs = []
-        with open(REQUIRED_TEMPLATE_PATH) as file:
-            docs = file.read()
-
-        # for doc in docs:
-        self.learn(docs, True)
-
-        self.to_entities(ENTITIES_PATH)
-        self.to_triggers(TRIGGERS_PATH)
-        self.to_relation(RELATION_PATH)
 
     def export_knowledge_base_json(self):
         results = {}
@@ -118,3 +99,16 @@ class ExtractionEngine:
 
         with open(KNOWLEDGE_BASE_JSON_PATH, "w") as file:
             file.write(json.dumps(results, indent=2,ensure_ascii=False).encode("utf-8").decode())
+
+    def export_from_template(self, cached=True):
+            docs = []
+            with open(REQUIRED_TEMPLATE_PATH) as file:
+                docs = file.read()
+    
+            # for doc in docs:
+            self.learn(docs, True)
+
+            if cached:
+                self.to_entities(ENTITIES_PATH)
+                self.to_triggers(TRIGGERS_PATH)
+                self.to_relation(RELATION_PATH)

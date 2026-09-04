@@ -54,6 +54,8 @@ def flat2(arr_2d):
     return [col for row in arr_2d for col in row]
 
 # PATH
+DEFAULT_TEMPLATE_NAME = "required_template"
+
 KNOWLEDGE_DIRECTORY = join("knowledge_directory")
 
 KNOWLEDGE_BASE_TXT_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.txt")
@@ -62,8 +64,8 @@ REQUIRED_TEMPLATE_PATH = join(KNOWLEDGE_DIRECTORY, "required_template.txt")
 DATA_COLLECTION_XLSX_PATH = join(KNOWLEDGE_DIRECTORY, "data_collection.xlsx")
 
 KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.json")
-ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, "entities.json")
-TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, "triggers.json")
-RELATION_PATH = join(KNOWLEDGE_DIRECTORY, "relation.json")
+ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"entities.json")
+TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"triggers.json")
+RELATION_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"relation.json")
 SOFTWARE_ROLE_PATH = join(KNOWLEDGE_DIRECTORY, "roles", "software-data.json")
 SOFTWARE_DOMAIN_PATH = join(KNOWLEDGE_DIRECTORY, "domain", "software-domain.json")
