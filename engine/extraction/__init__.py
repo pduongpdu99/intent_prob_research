@@ -89,7 +89,7 @@ class ExtractionEngine:
                 _str = re.split(r"(\[[^\]]*\])", _line)
                 if len(_str) == 1: continue
                 software_type = _str[1][1:-1]
-                required_description = _str[2].strip()
+                required_description = _str[2].strip().lower()
 
                 if software_type not in results:
                     results[software_type] = []

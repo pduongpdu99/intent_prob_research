@@ -222,3 +222,4 @@ __marimo__/
 weights
 scripts.sh
 **/*/.cached
+git-alias.sh
