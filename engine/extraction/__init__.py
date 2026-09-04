@@ -73,8 +73,8 @@ class ExtractionEngine:
             self.triggers = __triggers
             self.relation = __relation
 
-        self.entities = list(set(self.entities))
-        self.triggers = list(set(self.triggers))
+        # self.entities = list(set(self.entities))
+        # self.triggers = list(set(self.triggers))
 
     def to_entities(self, path: str):
         with open(path, "w") as file:
@@ -91,10 +91,10 @@ class ExtractionEngine:
     def export_from_template(self):
         docs = []
         with open(REQUIRED_TEMPLATE_PATH) as file:
-            docs = file.readlines()
+            docs = file.read()
 
-        for doc in docs:
-            self.learn(doc)
+        # for doc in docs:
+        self.learn(docs, True)
 
         self.to_entities(ENTITIES_PATH)
         self.to_triggers(TRIGGERS_PATH)
