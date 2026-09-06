@@ -12,6 +12,8 @@ class Tag(Enum):
     STAR        = "star"
     SRAI        = "srai"
 
+TASK_TYPES = ["BUSINESS_ANALYST","UI_UX_DESIGNER","FRONTEND_DEV","BACKEND_DEV","MOBILE_DEV","QA_QC","DEVOPS"]
+
 ENTITY_MAP = {
     # ==================== ORG (Organizations / Roles / People) ====================
     "công ty": "ORG",

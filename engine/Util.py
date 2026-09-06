@@ -53,8 +53,6 @@ def read_json(path: str) -> dict | None:
 def flat2(arr_2d):
     return [col for row in arr_2d for col in row]
 
-TASK_TYPES = ["BUSINESS_ANALYST","UI_UX_DESIGNER","FRONTEND_DEV","BACKEND_DEV","MOBILE_DEV","QA_QC","DEVOPS"]
-
 # PATH
 DEFAULT_TEMPLATE_NAME = "required_template"
 
