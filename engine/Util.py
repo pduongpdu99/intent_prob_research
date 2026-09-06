@@ -68,5 +68,8 @@ KLB_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "klb_embedding_average.json"
 ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"entities.json")
 TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"triggers.json")
 RELATION_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"relation.json")
+CACHED_KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","knowledge_base.json")
+CACHED_KLB_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","klb_embedding_average.json")
+
 SOFTWARE_ROLE_PATH = join(KNOWLEDGE_DIRECTORY, "roles", "software-data.json")
 SOFTWARE_DOMAIN_PATH = join(KNOWLEDGE_DIRECTORY, "domain", "software-domain.json")
