@@ -13,7 +13,9 @@ dependencies = [
     "torch",
     "python-dotenv",
     "numba",
-    "openpyxl"
+    "openpyxl",
+    "safetensors",
+    # "transformers"
 ]
 license = "MIT"
 authors = [
