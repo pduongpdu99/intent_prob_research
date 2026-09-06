@@ -36,7 +36,6 @@ class ExtractionEngine:
         self.triggers = []
         self.relation = []
         self.tokens = []
-
         # learning
 
     def learn(self, another_template: str, is_init=False):
@@ -99,6 +98,22 @@ class ExtractionEngine:
 
         with open(KNOWLEDGE_BASE_JSON_PATH, "w") as file:
             file.write(json.dumps(results, indent=2,ensure_ascii=False).encode("utf-8").decode())
+
+    def seperate_knowledge_base(self):
+        results = {}
+        with open(KNOWLEDGE_BASE_TXT_PATH) as file:
+            for line in file.readlines():
+                _str = re.split(r"(\[[^\]]*\])", line)
+                if len(_str) == 1: continue
+                software_type = _str[1][1:-1]
+                required_description = _str[2].strip().lower()
+
+                if software_type not in results:
+                    results[software_type] = []
+
+                if required_description not in results[software_type]:
+                    results[software_type].append(required_description)
+        return results
 
     def export_from_template(self, cached=True):
             docs = []
