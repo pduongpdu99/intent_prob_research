@@ -5,16 +5,20 @@ from .Util import (
     DATA_COLLECTION_XLSX_PATH,
     SOFTWARE_ROLE_PATH,
     SOFTWARE_DOMAIN_PATH,
+    KLB_EMBEDDING_JSON_PATH,
+    TASK_TYPES,
     read_json
 )
 import pandas as pd
 from typing import List, cast
 from engine.extraction import ExtractionEngine
+import numpy as np
 
 class Kernel:
     entities_data: List[dict] = []
     triggers_data: List[dict] = []
     relation_data: List[dict] = []
+    klb_embeddings: dict[str, List[np.float64]] = {}
     raci_matrix = pd.read_excel(DATA_COLLECTION_XLSX_PATH, sheet_name="raci")
     raci_matrix_domain = cast(dict, read_json(SOFTWARE_DOMAIN_PATH)).keys()
     raci_matrix_role = cast(dict, read_json(SOFTWARE_ROLE_PATH)).keys()
@@ -28,10 +32,13 @@ class Kernel:
         self.relation_data = read_json(RELATION_PATH)
         self.__raci_matrix_norm()
         self.raci_matrix_domain = self.raci_matrix.index
+        self.klb_embeddings = read_json(KLB_EMBEDDING_JSON_PATH)
+
 
     def __raci_matrix_norm(self):
         keyname = "Unnamed: 0"
         self.raci_matrix.set_index(self.raci_matrix[keyname],inplace=True)
+        self.raci_matrix = self.raci_matrix[TASK_TYPES]
     
     def create_relation(self):
         self.extraction_tool.export_from_template()
