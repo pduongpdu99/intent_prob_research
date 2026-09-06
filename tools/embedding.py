@@ -5,15 +5,17 @@ from sentence_transformers import SentenceTransformer
 
 
 MODEL_PATH = Path("weights/ve2")
-
-model = SentenceTransformer(str(MODEL_PATH))
+if not MODEL_PATH.exists():
+    MODEL_PATH = "AITeamVN/Vietnamese_Embedding_v2"
+    model = SentenceTransformer(MODEL_PATH, model_kwargs={"use_safetensors": True})
+else:
+    model = SentenceTransformer(str(MODEL_PATH), model_kwargs={"use_safetensors": True})
 
 def sentence_embedding(sentences: List[str]):
     return model.encode(
         sentences,
         convert_to_tensor=True,
     )
-
 
 def get_similarity_sentence(
     sentence: str,
