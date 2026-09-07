@@ -76,3 +76,30 @@ def knowledge_directory_embedding():
     with open(CACHED_KLB_EMBEDDING_JSON_PATH, "w", encoding="utf-8") as file:
         file.write(json.dumps(averages, indent=1))
 
+def get_nearest_index(
+    embedding,
+    target_embeddings,
+):
+    scores = get_similarity_embeddings(embedding, target_embeddings).tolist()
+    index = -1
+    _max = 0
+    for i in range(0, len(scores[0])):
+        score = scores[0][i]
+        if _max >= score: continue
+        _max = score
+        index = i
+
+    return _max, index
+    
+def find_nearest_label(prompt: str):
+    from engine.Util import read_json, CACHED_KLB_EMBEDDING_JSON_PATH
+    embedding = sentence_embedding([prompt]).tolist()
+    klb_dict = read_json(CACHED_KLB_EMBEDDING_JSON_PATH)
+    klb_labels = list(klb_dict.keys())
+    klb_embeddings = list(klb_dict.values())
+    nearest_value, nearest_index = get_nearest_index(embedding, klb_embeddings)
+    return {
+        "index": nearest_index,
+        "value": nearest_value,
+        "label": klb_labels[nearest_index]
+    }
