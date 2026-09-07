@@ -43,14 +43,14 @@ class AsyncPipelineEngine:
 
     async def _run_single_step_safe(self, step_name: str, state: Dict[str, Any], state_lock: asyncio.Lock):
         """Bọc execution trong Semaphore để đảm bảo không vượt quá Pool Capacity"""
-        async with self.semaphore:  # 🛑 Chờ nếu Pool đã đầy
+        async with self.semaphore:
             step_info = self.steps[step_name]
             tool_fn = self.registry.tools.get(step_info["tool"])
 
             if not tool_fn:
                 raise KeyError(f"Tool '{step_info['tool']}' chưa được đăng ký!")
 
-            print(f"🚀 [START]: Step '{step_name}'")
+            print(f"[START]: Step '{step_name}'")
             
             # Chạy tool
             if asyncio.iscoroutinefunction(tool_fn):
@@ -65,7 +65,7 @@ class AsyncPipelineEngine:
                 elif result is not None:
                     state[step_name] = result
 
-            print(f"✅ [DONE ]: Step '{step_name}'")
+            print(f"[DONE ]: Step '{step_name}'")
             return step_name
 
     async def run(self, initial_state: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -80,7 +80,7 @@ class AsyncPipelineEngine:
             current_batch = list(ready_queue)
             ready_queue.clear()
 
-            print(f"\n⚡ Batch ready: {len(current_batch)} tasks (Pool Limit: {self.semaphore._value} slot free)")
+            print(f"\n Batch ready: {len(current_batch)} tasks (Pool Limit: {self.semaphore._value} slot free)")
             
             # Chạy toàn bộ batch thông qua wrapper có Semaphore
             finished_batch = await asyncio.gather(*[
