@@ -1,12 +1,12 @@
 import asyncio
-from typing import Callable, Dict, Any, List, Set
+from typing import Callable, Dict, Any, List, Set, Optional
 from collections import defaultdict, deque
 
 class AsyncToolRegistry:
     def __init__(self):
         self.tools: Dict[str, Callable] = {}
 
-    def register(self, name: str = None):
+    def register(self, name: Optional[str] = None):
         def decorator(func: Callable):
             tool_name = name or func.__name__
             self.tools[tool_name] = func
@@ -27,7 +27,7 @@ class AsyncPipelineEngine:
         # Pool giới hạn số lượng task chạy đồng thời để bảo vệ RAM
         self.semaphore = asyncio.Semaphore(max_concurrent_tasks)
 
-    def add_step(self, name: str, tool_name: str, depends_on: List[str] = None):
+    def add_step(self, name: str, tool_name: str, depends_on: Optional[List[str]] = None):
         depends_on = depends_on or []
         self.steps[name] = {
             "tool": tool_name,
@@ -68,7 +68,7 @@ class AsyncPipelineEngine:
             print(f"✅ [DONE ]: Step '{step_name}'")
             return step_name
 
-    async def run(self, initial_state: Dict[str, Any] = None) -> Dict[str, Any]:
+    async def run(self, initial_state: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         state = initial_state or {}
         in_degree = self.in_degree.copy()
         
