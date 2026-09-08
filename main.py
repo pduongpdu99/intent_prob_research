@@ -16,10 +16,10 @@ async def main():
     registry.tools['SYNC'] = preprocessing.sync_node
 
     ape = AsyncPipelineEngine(registry, max_concurrent_tasks=5)
-    ape.add_step("initialization", tool_name="initialization")
-    ape.add_step("A", tool_name="template", depends_on=['initialization'])
-    ape.add_step("B", tool_name="klb", depends_on=['initialization'])
-    ape.add_step("END", tool_name="SYNC", depends_on=['template', 'klb'])
+    ape.add_step("START", tool_name="initialization")
+    ape.add_step("A", tool_name="template", depends_on=['START'])
+    ape.add_step("B", tool_name="klb", depends_on=['START'])
+    ape.add_step("END", tool_name="SYNC", depends_on=['A', "B"])
 
     result = await ape.run()
 
