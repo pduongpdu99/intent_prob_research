@@ -46,6 +46,7 @@ def knowledge_directory_embedding():
     )
     import json
     import numpy as np
+    from sklearn.preprocessing import normalize
 
     knowledge_base_json = read_json(KNOWLEDGE_BASE_JSON_PATH) or {}
 
@@ -56,9 +57,8 @@ def knowledge_directory_embedding():
     for key in knowledge_base_json.keys():
         print("STARTING WITH ", key)
         results[key] = sentence_embedding(knowledge_base_json[key]).tolist()
-
-        count = len(results[key])
-        averages[key] = (np.sum(results[key],axis=0)/count).tolist()
+        averages[key] = np.mean(results[key], axis=0)
+        averages[key] = normalize(averages[key].reshape(1, -1))[0]
 
         print("ENDED Embedding ", key,"\n")
 
