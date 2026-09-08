@@ -15,6 +15,7 @@ dependencies = [
     "numba",
     "openpyxl",
     "safetensors",
+    "scikit-learn"
     # "transformers"
 ]
 license = "MIT"
