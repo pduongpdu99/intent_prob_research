@@ -6,9 +6,9 @@ from .Util import (
     SOFTWARE_ROLE_PATH,
     SOFTWARE_DOMAIN_PATH,
     KLB_EMBEDDING_JSON_PATH,
-    TASK_TYPES,
     read_json
 )
+from engine.constants import TASK_TYPES
 import pandas as pd
 from typing import List, cast
 from engine.extraction import ExtractionEngine
