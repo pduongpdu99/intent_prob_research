@@ -58,7 +58,7 @@ def knowledge_directory_embedding():
         print("STARTING WITH ", key)
         results[key] = sentence_embedding(knowledge_base_json[key]).tolist()
         averages[key] = np.mean(results[key], axis=0)
-        averages[key] = normalize(averages[key].reshape(1, -1))[0]
+        averages[key] = normalize(averages[key].reshape(1, -1))[0].tolist()
 
         print("ENDED Embedding ", key,"\n")
 
