@@ -63,7 +63,7 @@ REQUIRED_TEMPLATE_PATH = join(KNOWLEDGE_DIRECTORY, "required_template.txt")
 
 DATA_COLLECTION_XLSX_PATH = join(KNOWLEDGE_DIRECTORY, "data_collection.xlsx")
 
-KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "knowledge_base.json")
+KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base.json")
 KLB_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, "klb_embedding_average.json")
 ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"entities.json")
 TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"triggers.json")
