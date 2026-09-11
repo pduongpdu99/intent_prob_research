@@ -1,6 +1,7 @@
 import os
 import unicodedata
 from dotenv import load_dotenv
+import numpy as np
 
 load_dotenv()
 HF_TOKEN = os.getenv("hf_token")
@@ -52,6 +53,24 @@ def read_json(path: str) -> dict | None:
 
 def flat2(arr_2d):
     return [col for row in arr_2d for col in row]
+
+def elbow_method(X: np.ndarray, kmax: int=10):
+    from sklearn.cluster import KMeans
+    from scipy.spatial.distance import cdist
+    k_range = range(1, kmax+1)
+
+    distorions = []
+    inertias = []
+    mapping1 = {}
+    mapping2 = {}
+
+    for k in k_range:
+        kmean_model = KMeans(n_clusters=k, random_state=42).fit(X)
+        distorions.append(sum(np.min(cdist(X, kmean_model.cluster_centers_, "euclidean"),axis=1)**2)/X.shape[0])
+        inertias.append(kmean_model.inertia_)
+        mapping1[k] = distorions[-1]
+        mapping2[k] = inertias[-1]
+    return distorions,inertias,mapping1,mapping2
 
 # PATH
 DEFAULT_TEMPLATE_NAME = "required_template"
