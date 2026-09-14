@@ -2,11 +2,13 @@ import os
 import unicodedata
 from dotenv import load_dotenv
 import numpy as np
+from typing import Any
+from pathlib import Path
 
 load_dotenv()
 HF_TOKEN = os.getenv("hf_token")
 
-root_directory_path = os.getcwd()
+root_directory_path = Path.cwd()
 
 def join(*sub:str):
     return os.path.join(root_directory_path, *sub)
@@ -40,13 +42,23 @@ def get_non_sw(kv_structure=False):
 
     return result
 
-def read_json(path: str) -> dict | None:
+def read_json(path: str) -> dict:
     import json
     try :
         with open(path, "r", encoding="utf-8") as file:
             _ = file.read().strip()
             if len(_) == 0: _ = '{}'
             return json.loads(_)
+    except FileNotFoundError as e:
+        print(e)
+        return {}
+
+def write_json(path: str, data: Any) -> None:
+    import json
+    try :
+        with open(path, "w", encoding="utf-8") as file:
+            file.write(json.dumps(data, indent=1))
+            print("Write completed")
     except FileNotFoundError as e:
         print(e)
         return None
@@ -66,11 +78,42 @@ def elbow_method(X: np.ndarray, kmax: int=10):
 
     for k in k_range:
         kmean_model = KMeans(n_clusters=k, random_state=42).fit(X)
-        distorions.append(sum(np.min(cdist(X, kmean_model.cluster_centers_, "euclidean"),axis=1)**2)/X.shape[0])
+        distorions.append(float(sum(np.min(cdist(X, kmean_model.cluster_centers_, "euclidean"),axis=1)**2)/X.shape[0]))
         inertias.append(kmean_model.inertia_)
         mapping1[k] = distorions[-1]
         mapping2[k] = inertias[-1]
     return distorions,inertias,mapping1,mapping2
+
+def find_elbow(ks, ws):
+    A = np.array([ks[0], ws[0]], dtype=float)
+    B = np.array([ks[-1], ws[-1]], dtype=float)
+    AB = A-B
+    AB_norm = np.linalg.norm(AB)
+
+
+    distances = []
+    for k, w in zip(ks,ws):
+        P = np.array([k, w],dtype=float)
+        AP = A-P
+        cross = AB[0] * AP[1] - AB[1] * AP[0]
+        distance = abs(cross) / AB_norm
+        distances.append(distance)
+
+    elbow_index = np.argmax(distances)
+    return ks[elbow_index], distances
+
+def expose_clustering_model(domain: str):
+    from sklearn.cluster import KMeans
+    clusters = read_json(CACHED_DOMAIN_K_CLUSTER_PATH)
+    embeddings_domains: dict = read_json(CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH)
+    X = embeddings_domains[domain]
+    kmean_model = KMeans(n_clusters=clusters[domain]).fit(X)
+    return kmean_model
+
+def update_clustering_model(model, embeddings):
+    model.predict(embeddings)
+    return model
+
 
 # PATH
 DEFAULT_TEMPLATE_NAME = "required_template"
@@ -88,6 +131,9 @@ ENTITIES_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"enti
 TRIGGERS_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"triggers.json")
 RELATION_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", DEFAULT_TEMPLATE_NAME,"relation.json")
 CACHED_KNOWLEDGE_BASE_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","knowledge_base.json")
+CACHED_DOMAIN_K_CLUSTER_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","domain_k_cluster.json")
+CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","knowledge_base_with_empty.json")
+CACHED_KNOWLEDGE_BASE_ELBOW_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","knowledge_base_elbow_cache.json")
 CACHED_KLB_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","klb_embedding_average.json")
 
 SOFTWARE_ROLE_PATH = join(KNOWLEDGE_DIRECTORY, "roles", "software-data.json")
