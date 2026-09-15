@@ -19,7 +19,7 @@ def export_klb(state: dict):
     state['klb_status'] = 200
     return state
 
-def expose_KLB_empty(state: dict = {}):
+def __expose_KLB_empty():
     from pathlib import Path
     from typing import cast, List
     from engine.Util import (
@@ -43,10 +43,9 @@ def expose_KLB_empty(state: dict = {}):
     else:
         data = read_json(CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH)
         columns = list(data.keys())
-    state[StateKeys.DOMAINS.value] = columns
-    state[StateKeys.DATA.value] = data
+    return columns, data
 
-def expose_elbow(state: dict = {}):
+def __expose_elbow(state: dict = {}):
     from pathlib import Path
     import numpy as np
     from engine.Util import (
@@ -81,7 +80,7 @@ def expose_elbow(state: dict = {}):
 
     return collection
 
-def expose_k_optimize(state: dict = {}):
+def __expose_k_optimize(state: dict = {}):
     from pathlib import Path
     from engine.Util import (
         write_json, 
@@ -105,20 +104,21 @@ def expose_k_optimize(state: dict = {}):
     else:
         k_domains = read_json(CACHED_DOMAIN_K_CLUSTER_PATH)
 
-    state[StateKeys.K_DOMAIN.value] = k_domains
+    return k_domains
 
 def clustering(state:dict = {}):
-    columns, data = state[StateKeys.DOMAINS.value], state[StateKeys.DATA.value]
-    collection = expose_elbow({
-        'domains': columns,
-        'data': data
-    })
-    k_domains = expose_k_optimize({
+    columns, data = __expose_KLB_empty()
+    state[StateKeys.DOMAINS.value] = columns
+    state[StateKeys.DATA.value] = data
+
+    collection = __expose_elbow({'domains': columns,'data': data})
+    state[StateKeys.ELBOW.value] = collection
+
+    k_domains = __expose_k_optimize({
         'elbow': collection,
         'domains': columns
     })
-
-    state['k_domains'] = k_domains
+    state[StateKeys.K_DOMAIN.value] = k_domains
     return state
 
 def sync_node(state:dict):
