@@ -1,3 +1,5 @@
+from engine.enums import StateKeys
+
 async def preprocessing(state: dict):
     from engine.kernel import Kernel
     kernel = Kernel()
@@ -10,11 +12,113 @@ def export_template(state: dict):
     return state
 
 def export_klb(state: dict):
-    from tools.embedding import knowledge_directory_embedding
+    from tasks.embedding import knowledge_directory_embedding
     kernel = state['kernel']
     kernel.extraction_tool.export_knowledge_base_json()
     knowledge_directory_embedding()
     state['klb_status'] = 200
+    return state
+
+def expose_KLB_empty(state: dict = {}):
+    from pathlib import Path
+    from typing import cast, List
+    from engine.Util import (
+        write_json, 
+        read_json,
+        CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH,
+        CACHED_KNOWLEDGE_BASE_JSON_PATH
+    )
+    from tasks.embedding import sentence_embedding
+    data = {}
+    columns = []
+    if not Path(CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH).exists():
+        data = read_json(CACHED_KNOWLEDGE_BASE_JSON_PATH)
+        columns = list(data.keys())
+        _max = max([len(i) for i in data.values()])
+        for col in columns:
+            t = cast(List[str], data.get(col))
+            t = t + list(sentence_embedding(([''] * (_max - len(t))) ).tolist())
+            data.update({col: t})
+        write_json(CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH, data)
+    else:
+        data = read_json(CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH)
+        columns = list(data.keys())
+    state[StateKeys.DOMAINS.value] = columns
+    state[StateKeys.DATA.value] = data
+
+def expose_elbow(state: dict = {}):
+    from pathlib import Path
+    import numpy as np
+    from engine.Util import (
+        write_json, 
+        read_json,
+        elbow_method,
+        CACHED_KNOWLEDGE_BASE_ELBOW_PATH,
+    )
+    if StateKeys.DATA.value not in state:
+        raise ValueError("Data empty")
+
+    if StateKeys.DOMAINS.value not in state:
+        raise ValueError("Domain empty")
+        
+    data = state[StateKeys.DATA.value]
+    domains = state[StateKeys.DOMAINS.value]
+    collection = []
+    if not Path(CACHED_KNOWLEDGE_BASE_ELBOW_PATH).exists():
+        for domain in domains:
+            X = data[domain]
+
+            distorions, inertias, mapping1, mapping2 = elbow_method(np.array(X),10)
+            collection.append({
+                "distorions": distorions,
+                "inertias": inertias,
+                "mapping1": mapping1,
+                "mapping2": mapping2
+            })
+        write_json(CACHED_KNOWLEDGE_BASE_ELBOW_PATH, collection)
+    else:
+        collection = read_json(CACHED_KNOWLEDGE_BASE_ELBOW_PATH)
+
+    return collection
+
+def expose_k_optimize(state: dict = {}):
+    from pathlib import Path
+    from engine.Util import (
+        write_json, 
+        find_elbow,
+        read_json,
+        CACHED_DOMAIN_K_CLUSTER_PATH,
+    )
+    collection = state[StateKeys.ELBOW.value]
+    columns = state[StateKeys.DOMAINS.value]
+
+    if 'elbow' not in state:
+        raise ValueError("elbow is not exist")
+
+    if not Path(CACHED_DOMAIN_K_CLUSTER_PATH).exists():
+        k_domains = {}
+        for index, col in enumerate(collection):
+            distorion = col['distorions']
+            labels = [i+1 for i in range(len(distorion))]
+            k_domains[columns[index]] = find_elbow(labels, distorion)[0]
+        write_json(CACHED_DOMAIN_K_CLUSTER_PATH, k_domains)
+    else:
+        k_domains = read_json(CACHED_DOMAIN_K_CLUSTER_PATH)
+
+    state[StateKeys.K_DOMAIN.value] = k_domains
+
+def clustering(state:dict = {}):
+    columns, data = state[StateKeys.DOMAINS.value], state[StateKeys.DATA.value]
+    collection = expose_elbow({
+        'domains': columns,
+        'data': data
+    })
+    k_domains = expose_k_optimize({
+        'elbow': collection,
+        'domains': columns
+    })
+
+    state['k_domains'] = k_domains
     return state
 
 def sync_node(state:dict):
