@@ -1,4 +1,4 @@
-# from tools.embedding import find_nearest_label
+# from tasks.embedding import find_nearest_label
 
 # prompt = "xây dựng hệ thống dạy hóa học trực tuyến"
 
@@ -13,15 +13,23 @@ async def main():
     registry.tools['initialization'] = preprocessing.preprocessing
     registry.tools['template'] = preprocessing.export_template
     registry.tools['klb'] = preprocessing.export_klb
+    registry.tools['prepare_k_optimize'] = preprocessing.clustering
     registry.tools['SYNC'] = preprocessing.sync_node
 
     ape = AsyncPipelineEngine(registry, max_concurrent_tasks=5)
     ape.add_step("START", tool_name="initialization")
+    # preparation
     ape.add_step("A", tool_name="template", depends_on=['START'])
     ape.add_step("B", tool_name="klb", depends_on=['START'])
-    ape.add_step("END", tool_name="SYNC", depends_on=['A', "B"])
+    ape.add_step("prepare_k_optimize", tool_name="prepare_k_optimize", depends_on=['A', "B"])
+
+    # calculate mean clustered embedding
+
+    # end node
+    ape.add_step("END", tool_name="SYNC", depends_on=['prepare_k_optimize'])
 
     result = await ape.run()
+    print(result)
 
 if __name__ == "__main__":
     import asyncio
