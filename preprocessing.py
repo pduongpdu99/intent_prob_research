@@ -1,24 +1,5 @@
 from engine.enums import StateKeys
 
-async def preprocessing(state: dict):
-    from engine.kernel import Kernel
-    kernel = Kernel()
-    return {"kernel": kernel}
-
-def export_template(state: dict):
-    kernel = state['kernel']
-    kernel.extraction_tool.export_from_template()
-    state['template_status'] = 200
-    return state
-
-def export_klb(state: dict):
-    from tasks.embedding import knowledge_directory_embedding
-    kernel = state['kernel']
-    kernel.extraction_tool.export_knowledge_base_json()
-    knowledge_directory_embedding()
-    state['klb_status'] = 200
-    return state
-
 def __expose_KLB_empty():
     from pathlib import Path
     from typing import cast, List
@@ -105,6 +86,25 @@ def __expose_k_optimize(state: dict = {}):
         k_domains = read_json(CACHED_DOMAIN_K_CLUSTER_PATH)
 
     return k_domains
+
+async def preprocessing(state: dict):
+    from engine.kernel import Kernel
+    kernel = Kernel()
+    return {"kernel": kernel}
+
+def export_template(state: dict):
+    kernel = state['kernel']
+    kernel.extraction_tool.export_from_template()
+    state['template_status'] = 200
+    return state
+
+def export_klb(state: dict):
+    from tasks.embedding import knowledge_directory_embedding
+    kernel = state['kernel']
+    kernel.extraction_tool.export_knowledge_base_json()
+    knowledge_directory_embedding()
+    state['klb_status'] = 200
+    return state
 
 def clustering(state:dict = {}):
     columns, data = __expose_KLB_empty()
