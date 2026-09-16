@@ -26,6 +26,15 @@ def __expose_KLB_empty():
         columns = list(data.keys())
     return columns, data
 
+def __expose_KLB():
+    from engine.Util import (
+        read_json,
+        CACHED_KNOWLEDGE_BASE_JSON_PATH
+    )
+    data = read_json(CACHED_KNOWLEDGE_BASE_JSON_PATH)
+    columns = list(data.keys())
+    return columns, data
+
 def __expose_elbow(state: dict = {}):
     from pathlib import Path
     import numpy as np
@@ -107,7 +116,7 @@ def export_klb(state: dict):
     return state
 
 def clustering(state:dict = {}):
-    columns, data = __expose_KLB_empty()
+    columns, data = __expose_KLB()
     state[StateKeys.DOMAINS.value] = columns
     state[StateKeys.DATA.value] = data
 
@@ -119,6 +128,11 @@ def clustering(state:dict = {}):
         'domains': columns
     })
     state[StateKeys.K_DOMAIN.value] = k_domains
+    return state
+
+def mean_clustered_embedding(state:dict={}):
+    from tasks.clustering import expose_domain_mean_embedding
+    expose_domain_mean_embedding()
     return state
 
 def sync_node(state:dict):
