@@ -1,7 +1,6 @@
-from typing import List
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
-
+from typing import List
 
 MODEL_PATH = Path("weights/ve2")
 if not MODEL_PATH.exists():
@@ -39,9 +38,7 @@ def knowledge_directory_embedding():
     from engine.Util import (
         KNOWLEDGE_BASE_JSON_PATH,
         CACHED_KNOWLEDGE_BASE_JSON_PATH,
-        CACHED_KLB_EMBEDDING_JSON_PATH,
         CACHED_KNOWLEDGE_BASE_JSON_PATH,
-        CACHED_KLB_EMBEDDING_JSON_PATH,
         read_json
     )
     import json
@@ -66,15 +63,9 @@ def knowledge_directory_embedding():
     _file.parent.mkdir(parents=True, exist_ok=True)
     _file.touch(exist_ok=True)
 
-    _file = Path(CACHED_KLB_EMBEDDING_JSON_PATH)
-    _file.parent.mkdir(parents=True, exist_ok=True)
-    _file.touch(exist_ok=True)
-
     with open(CACHED_KNOWLEDGE_BASE_JSON_PATH, "w", encoding="utf-8") as file:
         file.write(json.dumps(results, indent=1))
 
-    with open(CACHED_KLB_EMBEDDING_JSON_PATH, "w", encoding="utf-8") as file:
-        file.write(json.dumps(averages, indent=1))
 
 def get_nearest_index(
     embedding,
