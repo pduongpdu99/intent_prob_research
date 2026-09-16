@@ -14,6 +14,7 @@ async def main():
     registry.tools['template'] = preprocessing.export_template
     registry.tools['klb'] = preprocessing.export_klb
     registry.tools['prepare_k_optimize'] = preprocessing.clustering
+    registry.tools['expose_mean_embedding'] = preprocessing.mean_clustered_embedding
     registry.tools['SYNC'] = preprocessing.sync_node
 
     ape = AsyncPipelineEngine(registry, max_concurrent_tasks=5)
@@ -24,12 +25,12 @@ async def main():
     ape.add_step("prepare_k_optimize", tool_name="prepare_k_optimize", depends_on=['A', "B"])
 
     # calculate mean clustered embedding
+    ape.add_step("expose_mean_embedding", tool_name="expose_mean_embedding", depends_on=["prepare_k_optimize"])
 
     # end node
-    ape.add_step("END", tool_name="SYNC", depends_on=['prepare_k_optimize'])
+    ape.add_step("END", tool_name="SYNC", depends_on=['expose_mean_embedding'])
 
     result = await ape.run()
-    print(result)
 
 if __name__ == "__main__":
     import asyncio
