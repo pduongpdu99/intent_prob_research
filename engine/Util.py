@@ -135,6 +135,7 @@ CACHED_KNOWLEDGE_BASE_WITH_EMPTY_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "kn
 CACHED_KNOWLEDGE_BASE_ELBOW_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","knowledge_base_elbow_cache.json")
 CACHED_KLB_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","klb_embedding_average.json")
 CACHED_KLB_CLUSTERED_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached", "knowledge_base","klb_clustered_embedding.json")
+CACHED_DOMAIN_MEAN_EMBEDDING_JSON_PATH = join(KNOWLEDGE_DIRECTORY, ".cached","domain_mean_embedding.json")
 
 SOFTWARE_ROLE_PATH = join(KNOWLEDGE_DIRECTORY, "roles", "software-data.json")
 SOFTWARE_DOMAIN_PATH = join(KNOWLEDGE_DIRECTORY, "domain", "software-domain.json")
