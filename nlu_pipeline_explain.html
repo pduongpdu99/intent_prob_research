@@ -98,6 +98,133 @@
   </section>
 
   <section>
+      <h2>Ví dụ output sau khi gọi <code>enter_prompt</code></h2>
+      <p>Ví dụ dưới đây dùng prompt: <strong>chương trình đang thiếu tính năng báo cáo doanh thu, ngôn ngữ react nodejs có thể có phân trang vì dữ liệu có thể lớn cần hạn chế loading lớn</strong>.</p>
+
+      <pre>{
+    "prompt": "chương trình đang thiếu tính năng báo cáo doanh thu, ngôn ngữ react nodejs có thể có phân trang vì dữ liệu có thể lớn cần hạn chế loading lớn",
+    "domain": {
+      "domain": "FEATURE_FLAG_MANAGEMENT",
+      "fusion_score": 0.5045,
+      "cluster_match": 0.4892,
+      "direct_semantic": 0.4497,
+      "entity_trigger_compatibility": 0.625,
+      "cluster": "1",
+      "margin": 0.0052,
+      "confirmed": false
+    },
+    "domain_candidates": [
+      { "domain": "FEATURE_FLAG_MANAGEMENT", "fusion_score": 0.5045 },
+      { "domain": "CLOUD_INFRA_PROVISIONING", "fusion_score": 0.4993 },
+      { "domain": "UNIT_TESTING", "fusion_score": 0.4988 }
+    ],
+    "enrichment": {
+      "status": "enriched",
+      "source": "rule_base",
+      "context": {
+        "domain": "FEATURE_FLAG_MANAGEMENT",
+        "cluster": "1",
+        "entities": [
+          { "text": "báo cáo", "type": "FEATURE" },
+          { "text": "doanh thu", "type": "FEATURE" },
+          { "text": "react", "type": "TECH" },
+          { "text": "nodejs", "type": "TECH" },
+          { "text": "dữ liệu", "type": "FEATURE" }
+        ],
+        "triggers": [
+          { "text": "báo cáo", "type": "REPORTS" }
+        ]
+      },
+      "missing_information": [
+        "ràng buộc về hiệu năng, bảo mật hoặc khả năng mở rộng nếu có"
+      ]
+    },
+    "intent_resolution": null,
+    "routing": {
+      "status": "needs_clarification",
+      "decision": "ask_for_clarification",
+      "strategy": "top_k_independent_evidence_fusion"
+    }
+  }</pre>
+
+      <h3>Giải thích từng phần</h3>
+      <table>
+        <thead><tr><th>Phần output</th><th>Giải thích cho ví dụ này</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>prompt</code></td>
+            <td>Prompt gốc chứa nhiều ý: báo cáo doanh thu, React/Node.js, phân trang và giới hạn tải dữ liệu.</td>
+          </tr>
+          <tr>
+            <td><code>domain</code></td>
+            <td>Domain đứng đầu là <code>FEATURE_FLAG_MANAGEMENT</code> với <code>fusion_score=0.5045</code>. Đây chỉ là ứng viên tốt nhất, chưa phải kết luận chắc chắn.</td>
+          </tr>
+          <tr>
+            <td><code>cluster_match</code></td>
+            <td>Cluster gần nhất trong domain đứng đầu đạt <code>0.4892</code>. Trường <code>cluster="1"</code> là prototype đã có trong cache, không phải subintent mới.</td>
+          </tr>
+          <tr>
+            <td><code>direct_semantic</code></td>
+            <td>Điểm trung bình của tối đa ba cluster tốt nhất thuộc domain. Giá trị <code>0.4497</code> cho thấy semantic evidence chưa mạnh.</td>
+          </tr>
+          <tr>
+            <td><code>entity_trigger_compatibility</code></td>
+            <td>Entity/trigger khớp với mẫu của domain ở mức <code>0.625</code>. Evidence này hỗ trợ domain nhưng chưa đủ để bù cho điểm semantic thấp.</td>
+          </tr>
+          <tr>
+            <td><code>margin</code> và <code>confirmed</code></td>
+            <td><code>margin=0.0052</code> vì domain đầu chỉ hơn domain thứ hai khoảng 0.0052. Margin này nhỏ hơn <code>MATCH_MARGIN=0.04</code>, nên <code>confirmed=false</code>.</td>
+          </tr>
+          <tr>
+            <td><code>domain_candidates</code></td>
+            <td>Ba domain đầu có điểm rất sát nhau: Feature Flag, Cloud Infrastructure và Unit Testing. Đây là lý do hệ thống không nên route cứng.</td>
+          </tr>
+          <tr>
+            <td><code>roles</code></td>
+            <td>Danh sách rỗng vì prompt không chứa role đã được khai báo trong role mapping.</td>
+          </tr>
+          <tr>
+            <td><code>enrichment</code></td>
+            <td>Enrichment chạy bằng rule base. Nó lấy evidence trong domain đang đứng đầu, giữ lại entities/triggers và phát hiện thiếu constraint về hiệu năng, bảo mật hoặc mở rộng.</td>
+          </tr>
+          <tr>
+            <td><code>evidence</code></td>
+            <td>Các câu mẫu được chọn nhờ lexical overlap. Chúng là bằng chứng tham khảo trong knowledge base, không phải kết luận intent.</td>
+          </tr>
+          <tr>
+            <td><code>intent_resolution</code></td>
+            <td>Giá trị <code>null</code> là đúng vì lệnh <code>enter_prompt</code> hiện gọi <code>analyze_prompt(prompt)</code> mà không truyền <code>candidate_intents</code>.</td>
+          </tr>
+          <tr>
+            <td><code>routing</code></td>
+            <td><code>needs_clarification</code> và <code>ask_for_clarification</code> bảo vệ pipeline khỏi quyết định sai khi các domain cạnh tranh quá sát nhau.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning">
+        <strong>Lưu ý diễn giải:</strong> <code>enrichment.status="enriched"</code> không có nghĩa domain đã được xác nhận. Nó chỉ nói rằng hệ thống đã tìm được context/evidence để bổ sung. Trạng thái quyết định route phải đọc từ <code>routing.status</code> và <code>domain.confirmed</code>.
+      </div>
+
+      <h3>Vì sao chưa có intent?</h3>
+      <p>Intent resolver chỉ chạy khi caller truyền danh sách candidate intents:</p>
+      <pre>enter_prompt(prompt)  # intent_resolution = null
+
+  # Muốn resolve intent:
+  analyze_prompt(
+      prompt,
+      candidate_intents=[
+          {
+              "intent": "REPORTING_FEATURE",
+              "domain": "FEATURE_DEVELOPMENT",
+              "examples": ["xây dựng báo cáo doanh thu có phân trang"]
+          }
+      ],
+  )</pre>
+
+  </section>
+
+  <section>
     <h2>Luồng tổng thể</h2>
     <div class="mermaid">
 flowchart TD
