@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NLU Pipeline Explain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <script type="module">
     import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
     mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "strict" });
@@ -29,12 +32,12 @@
       background:
         radial-gradient(circle at 10% 0%, rgba(180, 71, 47, .12), transparent 32rem),
         linear-gradient(135deg, #f5f3ee 0%, #edf2f0 100%);
-      font: 16px/1.65 Georgia, "Times New Roman", serif;
+      font: 17px/1.65 "Atkinson Hyperlegible", "Segoe UI", sans-serif;
     }
     main { max-width: 1180px; margin: 0 auto; padding: 56px 24px 80px; }
     header { max-width: 860px; margin-bottom: 42px; }
     .eyebrow {
-      color: var(--accent); font: 700 12px/1.2 Arial, sans-serif;
+      color: var(--accent); font: 700 12px/1.2 "Atkinson Hyperlegible", "Segoe UI", sans-serif;
       letter-spacing: .12em; text-transform: uppercase;
     }
     h1, h2, h3 { line-height: 1.15; margin: 0 0 14px; }
@@ -49,7 +52,7 @@
       border-radius: 8px; box-shadow: var(--shadow);
     }
     .panel p, .panel li { color: var(--muted); }
-    .number { color: var(--accent); font: 700 14px Arial, sans-serif; }
+    .number { color: var(--accent); font: 700 14px "Atkinson Hyperlegible", "Segoe UI", sans-serif; }
     code {
       padding: 2px 5px; color: #7b2c1e; background: var(--accent-soft);
       border-radius: 4px; font: .9em "SFMono-Regular", Consolas, monospace;
@@ -268,8 +271,8 @@ result = analyze_prompt(prompt, candidate_intents=[
     </article>
 
     <article class="panel" style="margin-top: 20px;">
-      <h3><code>fuse_domain_candidates(...) -&gt; list[dict]</code></h3>
-      <p>Hàm trong <code>domain_resolution.py</code>. Nhận toàn bộ cluster matches, không khóa domain trước, sau đó chấm độc lập và xếp hạng domain.</p>
+      <h3><code>fuse_domain_candidates(cluster_matches, *, entities, triggers, knowledge_base, limit=3) -&gt; list[dict]</code></h3>
+      <p>Hàm trong <code>domain_resolution.py</code>. Nhận toàn bộ cluster matches và tín hiệu đã extract, không khóa domain trước, sau đó chấm độc lập và xếp hạng domain.</p>
       <table>
         <thead><tr><th>Field output</th><th>Kiểu</th><th>Ý nghĩa</th></tr></thead>
         <tbody>
