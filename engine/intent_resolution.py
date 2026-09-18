@@ -137,7 +137,10 @@ def resolve_intent(
             "reasoning": "Không có candidate intent hợp lệ để đối chiếu.",
             "slots": _fill_slots(entities, triggers),
             "requires_clarification": True,
-            "clarification_prompt": "Vui lòng cung cấp candidate intents hợp lệ cho domain này.",
+            "clarification_prompt": (
+                "Vui lòng cung cấp candidate intents hợp lệ "
+                "cho domain này."
+            ),
         }
 
     scored = sorted(
@@ -174,7 +177,8 @@ def resolve_intent(
     )
     reasoning = (
         f"Intent {best['intent']} phù hợp nhất với domain {selected_domain}; "
-        f"trigger [{trigger_text or 'không có'}] và entity [{entity_text or 'không có'}] "
+        f"trigger [{trigger_text or 'không có'}] "
+        f"và entity [{entity_text or 'không có'}] "
         f"cho điểm kết hợp {confidence:.2f}."
     )
 
@@ -186,7 +190,8 @@ def resolve_intent(
         "slots": _fill_slots(entities, triggers),
         "requires_clarification": requires_clarification,
         "clarification_prompt": (
-            "Bạn có thể làm rõ mục tiêu hoặc chọn một trong các intent ứng viên phù hợp không?"
+            "Bạn có thể làm rõ mục tiêu hoặc chọn một trong các intent "
+            "ứng viên phù hợp không?"
             if requires_clarification
             else None
         ),

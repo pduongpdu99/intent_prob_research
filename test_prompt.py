@@ -33,7 +33,9 @@ def _read_json(path: Path) -> dict:
 
 
 @lru_cache(maxsize=1)
-def load_domain_means(path: Path = DOMAIN_MEAN_FILE) -> dict[str, dict[str, list[float]]]:
+def load_domain_means(
+    path: Path = DOMAIN_MEAN_FILE,
+) -> dict[str, dict[str, list[float]]]:
     """Load the precomputed mean vector for every cluster of every domain."""
     domains = _read_json(path)
     for domain, clusters in domains.items():
@@ -121,7 +123,8 @@ def analyze_prompt(
     best_candidate = domain_candidates[0] if domain_candidates else {}
     best_cluster = next(
         (
-            match for match in all_cluster_matches
+            match
+            for match in all_cluster_matches
             if match["domain"] == best_candidate.get("domain")
         ),
         {},
